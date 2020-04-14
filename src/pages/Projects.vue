@@ -14,7 +14,7 @@
                     Gist Explorer
                 </div>
                 <div style="grid-area: description">
-                    An additional DevTool panel for your gists.
+                    I hate searching for my gists on github to run them on the current page... so i build an additional DevTool panel for my (and your) Gists.
                 </div>
                 <div style="grid-area: tag">
                     #devtool
@@ -29,7 +29,7 @@
                     +Sub
                 </div>
                 <div style="grid-area: description">
-                    An extension which adds subtitle to HTML video tags via file or subtitle search powered by tmbd & opensubtitles.org.
+                    I need subtitle for my favorite series/movies and i don't care which movie provider, which MAY provide some subtitles... So I build an extension which can inject subtitles to HTML5 videos.
                 </div>
                 <div style="grid-area: tag">
                     #subtitle
