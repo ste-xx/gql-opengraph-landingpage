@@ -30,7 +30,7 @@ body {
 }
 
 .layout {
-  max-width: 760px;
+  max-width: 100%;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
