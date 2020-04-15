@@ -59,6 +59,11 @@ body {
 .header a:visited{
   color: #aeb9bb;
 }
+
+.header a{
+  color: #aeb9bb;
+}
+
 .nav__link {
   margin-left: 20px;
 }
