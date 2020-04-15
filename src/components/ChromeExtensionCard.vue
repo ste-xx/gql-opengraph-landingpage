@@ -12,10 +12,10 @@
     <div class="chromeExtensionCardTitle">
       <slot name="title"/>
     </div>
-    <div style="grid-area: description">
+    <div class="chromeExtensionCardDescription">
       <slot name="description"/>
     </div>
-    <div style="grid-area: tag">
+    <div class="chromeExtensionCardTag">
       <slot name="tag"/>
     </div>
   </div>
@@ -84,5 +84,24 @@
     grid-area: title;
     align-self: center;
     font-weight: 700;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  .chromeExtensionCardDescription {
+    grid-area: description;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+
+  .chromeExtensionCardTag {
+    grid-area: tag;
+    margin-left: 8px;
+    margin-right: 8px;
+    color: blue;
+    font-size: 0.7em;
+    font-weight: 700;
+    align-self: center;
   }
 </style>

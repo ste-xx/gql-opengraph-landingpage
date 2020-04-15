@@ -21,7 +21,7 @@
           DevTool panel for my (and your) Gists.
         </template>
         <template slot="tag">
-          #devtool
+          #devtool #js #vue
         </template>
       </chrome-extension-card>
 
@@ -40,7 +40,7 @@
           provide some subtitles... So I build an extension which can inject subtitles to HTML5 videos.
         </template>
         <template slot="tag">
-          #subtitle
+          #subtitle #js #redux
         </template>
       </chrome-extension-card>
     </div>
