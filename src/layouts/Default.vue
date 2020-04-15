@@ -1,16 +1,19 @@
 <template>
   <div class="layout background-container">
     <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/projects/">Projects</g-link>
-        <g-link class="nav__link" to="/blog/">Blog</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
+      <div style="display: flex;margin-left: 24px; margin-right: 24px; width: 100%; justify-content: space-between;">
+        <strong>
+          <g-link to="/">ste-xx</g-link>
+        </strong>
+        <nav class="nav">
+          <g-link class="nav__link" to="/">Home</g-link>
+          <g-link class="nav__link" to="/projects/">Projects</g-link>
+          <g-link class="nav__link" to="/blog/">Blog</g-link>
+          <g-link class="nav__link" to="/about/">About</g-link>
+        </nav>
+      </div>
     </header>
+    <div class="header-spacer">&nbsp;</div>
     <slot/>
   </div>
 </template>
@@ -37,15 +40,25 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
-
+.header-spacer {
+  height: 40px;
+}
 .header {
+  position: fixed;
+  width: 100vw;
+  color: #aeb9bb;
+  background-color: rgba(0,0,0,0.8);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  height: 80px;
+  height: 60px;
+  z-index: 100;
+  left: 0;
 }
-
+.header a:visited{
+  color: #aeb9bb;
+}
 .nav__link {
   margin-left: 20px;
 }
