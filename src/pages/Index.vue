@@ -4,10 +4,8 @@
 
     <h4 class="introduction_subheader">I’m Stefan (ste-xx) and I’m just a guy who loves to code and a wannapreneur</h4>
 
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
+    <g-link class="nav__link" to="/projects/">side projects</g-link>
+    <g-link class="nav__link" to="/about/">about</g-link>
 
   </Layout>
 </template>

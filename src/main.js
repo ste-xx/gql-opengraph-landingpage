@@ -7,6 +7,8 @@ import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import 'typeface-montserrat';
+
 // external-link-alt
 config.autoAddCss = false;
 library.add(faGithub);

@@ -3,13 +3,11 @@
     <header class="header">
       <div style="display: flex;margin-left: 24px; margin-right: 24px; width: 100%; justify-content: space-between;">
         <strong>
-          <g-link to="/">ste-xx</g-link>
+          <g-link to="/">STE-XX</g-link>
         </strong>
         <nav class="nav">
-          <g-link class="nav__link" to="/">Home</g-link>
-          <g-link class="nav__link" to="/projects/">Projects</g-link>
-          <g-link class="nav__link" to="/blog/">Blog</g-link>
-          <g-link class="nav__link" to="/about/">About</g-link>
+          <g-link class="nav__link" to="/projects/">side projects</g-link>
+          <g-link class="nav__link" to="/about/">about</g-link>
         </nav>
       </div>
     </header>
@@ -28,11 +26,13 @@ query {
 
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  /*font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;*/
   margin:0;
   padding:0;
   line-height: 1.5;
+  font-family: Montserrat;
 }
+
 
 .layout {
   max-width: 100%;
