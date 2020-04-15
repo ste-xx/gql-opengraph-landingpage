@@ -44,7 +44,7 @@
 <style>
   .chromeExtensionCard {
     display: grid;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: var(--card-shadow);
     grid-template-areas:
             'image image image'
             'title title title'
@@ -83,25 +83,22 @@
   .chromeExtensionCardTitle {
     grid-area: title;
     align-self: center;
-    font-weight: 700;
-    margin-right: 8px;
-    margin-left: 8px;
+    font-weight: var(--card-title-font-weight);
+    margin: var(--card-content-margin);
   }
 
   .chromeExtensionCardDescription {
     grid-area: description;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin: var(--card-content-margin);
   }
 
 
   .chromeExtensionCardTag {
     grid-area: tag;
-    margin-left: 8px;
-    margin-right: 8px;
-    color: blue;
-    font-size: 0.7em;
-    font-weight: 700;
+    margin: var(--card-content-margin);
+    color: var(--card-tag-color);
+    font-size: var(--card-tag-font-size);
+    font-weight:var(--card-tag-font-weight);
     align-self: center;
   }
 </style>

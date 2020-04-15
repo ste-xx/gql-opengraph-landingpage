@@ -33,6 +33,14 @@ body {
   font-family: Montserrat;
 }
 
+:root {
+  --card-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  --card-content-margin: 0 8px;
+  --card-title-font-weight: 700;
+  --card-tag-color: blue;
+  --card-tag-font-size: 0.7em;
+  --card-tag-font-weight: 700;
+}
 
 .layout {
   max-width: 100%;

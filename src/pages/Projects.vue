@@ -45,8 +45,35 @@
       </chrome-extension-card>
     </div>
 
-    <h4 class="projectHeader">Wannalytics</h4>
-    <div>Social Channel Notifier</div>
+    <h4 class="projectHeader">self-organization</h4>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+      <div class="rssCard">
+        <div style="grid-area: title; font-weight: var(--card-title-font-weight); margin:var(--card-content-margin);">
+          Custom Rss Feed
+        </div>
+        <div style="grid-area: description; margin:var(--card-content-margin);">
+          Im addicted to dev news, sadly for my preferred channels are no rss feed available... So I build my own custom
+          RSS-Feed, which notifies me when new hot shit is available. (look up each hour) Build with firebase and typescript. I tried
+          some "classic" OOP stuff with typescript (inheritance, mixins, template methods) ... and now the codebase looks
+          like shit. Ea
+        </div>
+        <div style="grid-area: e0; margin:var(--card-content-margin);">
+          Github-Trending (ts, js, everthing(all-topics)) weekly
+        </div>
+        <div style="grid-area: e1; margin:var(--card-content-margin);">
+          HN (>500)weekly
+        </div>
+        <div style="grid-area: e2; margin:var(--card-content-margin);">
+          r/programming (500 points) weekly
+        </div>
+        <div style="grid-area: e3; margin:var(--card-content-margin);">
+          ProductHunt (300 votes) weekly
+        </div>
+        <div class="rssCardTag">
+          #ts #firebase #rss
+        </div>
+      </div>
+    </div>
 
     <h4 class="projectHeader">Wannarithm</h4>
     <div>hus #ml</div>
@@ -92,6 +119,38 @@
 
   .gistExplorer, .plussub {
     margin-top: 16px;
+  }
+
+  .rssCard {
+    display: grid;
+    box-shadow: var(--card-shadow);
+    grid-template-areas:
+      '.'
+      'title'
+      'description'
+      '.'
+      'e0'
+      'e1'
+      'e2'
+      'e3'
+      'tag';
+    grid-template-rows: 8px 2em auto 16px 1.5em 1.5em 1.5em 1.5em 1.5em;
+    width: 800px;
+    background-color: white;
+  }
+
+  @media (min-width:960px) {
+    .rssCard {
+      width: 800px
+    }
+  }
+
+                                                                                 .rssCardTag {
+    grid-area: tag;
+    margin: var(--card-content-margin);
+    color: var(--card-tag-color);
+    font-size: var(--card-tag-font-size);
+    font-weight: var(--card-tag-font-weight);
   }
 </style>
 
