@@ -5,8 +5,8 @@
         <slot name="image"/>
       </div>
       <div class="chromeExtensionCardIconContainer">
-        <font-awesome :icon="['fas', 'external-link-alt']" size="2x" @click="open(storeLink)"/>
-        <font-awesome :icon="['fab', 'github']" size="2x" @click="open(githubLink)"/>
+        <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open(storeLink)"/>
+        <font-awesome :icon="['fab', 'github']" size="1x" @click="open(githubLink)"/>
       </div>
     </div>
     <div class="chromeExtensionCardTitle">
@@ -70,14 +70,14 @@
   .chromeExtensionCardIconContainer {
     position: absolute;
     height: 100%;
-    top: 0;
-    right: 8px;
+    width: 4rem;
+    top: 8px;
+    right: 0;
 
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
 
-    color: rgb(112, 112, 112);
+    color: black;
   }
 
   .chromeExtensionCardTitle {

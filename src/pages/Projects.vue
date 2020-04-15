@@ -79,9 +79,19 @@
   .gistExplorer /deep/ .chromeExtensionCardImage {
     background-color: greenyellow;
   }
+  .gistExplorer /deep/ .chromeExtensionCardIconContainer {
+    color: black;
+  }
 
   .plussub /deep/ .chromeExtensionCardImage {
     background-color: #5bc0de;
+  }
+  .plussub /deep/ .chromeExtensionCardIconContainer {
+    color: white;
+  }
+
+  .gistExplorer, .plussub {
+    margin-top: 16px;
   }
 </style>
 
