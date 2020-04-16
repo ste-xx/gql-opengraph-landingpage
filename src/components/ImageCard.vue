@@ -1,48 +1,28 @@
 <template>
-  <div class="chromeExtensionCard">
-    <div class="chromeExtensionCardImage">
-      <div class="chromeExtensionCardImageContainer">
+  <div class="ImageCard">
+    <div class="ImageCardImage">
+      <div class="ImageCardImageContainer">
         <slot name="image"/>
       </div>
-      <div class="chromeExtensionCardIconContainer">
-        <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open(storeLink)"/>
-        <font-awesome :icon="['fab', 'github']" size="1x" @click="open(githubLink)"/>
+      <div class="ImageCardIconContainer">
+        <slot name="image-icons"/>
       </div>
     </div>
-    <div class="chromeExtensionCardTitle">
+    <div class="ImageCardTitle">
       <slot name="title"/>
     </div>
-    <div class="chromeExtensionCardDescription">
+    <div class="ImageCardDescription">
       <slot name="description"/>
     </div>
-    <div class="chromeExtensionCardTag">
+    <div class="ImageCardTag">
       <slot name="tag"/>
     </div>
   </div>
 </template>
-<script>
-  export default {
-    props: {
-      githubLink: {
-        type: String,
-        required: true
-      },
-      storeLink: {
-        type: String,
-        required: true
-      },
-    },
-    methods: {
-      open(link) {
-        window.open(link, 'blank');
-      }
-    },
-  }
-</script>
 
 
 <style>
-  .chromeExtensionCard {
+  .ImageCard {
     display: grid;
     box-shadow: var(--card-shadow);
     grid-template-areas:
@@ -55,19 +35,19 @@
     background-color: white;
   }
 
-  .chromeExtensionCardImage {
+  .ImageCardImage {
     grid-area: image;
     position: relative;
   }
 
-  .chromeExtensionCardImageContainer {
+  .ImageCardImageContainer {
     display: flex;
     justify-content: center;
     height: 100%;
     width: 100%;
   }
 
-  .chromeExtensionCardIconContainer {
+  .ImageCardIconContainer {
     position: absolute;
     height: 100%;
     width: 4rem;
@@ -80,20 +60,20 @@
     color: black;
   }
 
-  .chromeExtensionCardTitle {
+  .ImageCardTitle {
     grid-area: title;
     align-self: center;
     font-weight: var(--card-title-font-weight);
     margin: var(--card-content-margin);
   }
 
-  .chromeExtensionCardDescription {
+  .ImageCardDescription {
     grid-area: description;
     margin: var(--card-content-margin);
   }
 
 
-  .chromeExtensionCardTag {
+  .ImageCardTag {
     grid-area: tag;
     margin: var(--card-content-margin);
     color: var(--card-tag-color);

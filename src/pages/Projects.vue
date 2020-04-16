@@ -4,14 +4,15 @@
     <h4 class="projectHeader">Chrome Extensions</h4>
 
     <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-      <chrome-extension-card
-              class="gistExplorer"
-              store-link="https://chrome.google.com/webstore/detail/gist-devtool-explorer/egbmdjmhnblffjpfilldkklinjmflaag"
-              github-link="https://github.com/ste-xx/gist-dev-tool-explorer">
+      <image-card class="gistExplorer">
         <template slot="image">
           <div style=" display: flex; align-items: center; justify-content: center;">
             <g-image src="~/assets/gistexplorerlogo.png" width="80" height="80"/>
           </div>
+        </template>
+        <template slot="image-icons">
+          <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://chrome.google.com/webstore/detail/gist-devtool-explorer/egbmdjmhnblffjpfilldkklinjmflaag')"/>
+          <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/gist-dev-tool-explorer')"/>
         </template>
         <template slot="title">
           Gist Explorer
@@ -23,14 +24,15 @@
         <template slot="tag">
           #devtool #js #vue
         </template>
-      </chrome-extension-card>
+      </image-card>
 
-      <chrome-extension-card
-              class="plussub"
-              store-link="https://chrome.google.com/webstore/detail/%2Bsub/lpobdmdfgjokempajoobgfdnhjbjlnpm"
-              github-link="https://github.com/plussub/plussub">
+      <image-card class="plussub">
         <template slot="image">
           <g-image src="~/assets/plussublogo.png" width="128"/>
+        </template>
+        <template slot="image-icons">
+          <font-awesome :icon="['fas', 'external-link-alt']" size="1x" style="color: white" @click="open('https://chrome.google.com/webstore/detail/%2Bsub/lpobdmdfgjokempajoobgfdnhjbjlnpm')"/>
+          <font-awesome :icon="['fab', 'github']" size="1x" style="color: white" @click="open('https://github.com/plussub/plussub')"/>
         </template>
         <template slot="title">
           +Sub
@@ -42,37 +44,41 @@
         <template slot="tag">
           #subtitle #js #redux
         </template>
-      </chrome-extension-card>
+      </image-card>
     </div>
 
     <h4 class="projectHeader">self-organization</h4>
     <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-      <div class="rssCard">
-        <div style="grid-area: title; font-weight: var(--card-title-font-weight); margin:var(--card-content-margin);">
+      <simple-card>
+        <template slot="title">
           Custom Rss Feed
-        </div>
-        <div style="grid-area: description; margin:var(--card-content-margin);">
-          Im addicted to dev news, sadly for my preferred channels are no rss feed available... So I build my own custom
-          RSS-Feed, which notifies me when new hot shit is available. (look up each hour) Build with firebase and typescript. I tried
-          some "classic" OOP stuff with typescript (inheritance, mixins, template methods) ... and now the codebase looks
-          like shit. Ea
-        </div>
-        <div style="grid-area: e0; margin:var(--card-content-margin);">
-          Github-Trending (ts, js, everthing(all-topics)) weekly
-        </div>
-        <div style="grid-area: e1; margin:var(--card-content-margin);">
-          HN (>500)weekly
-        </div>
-        <div style="grid-area: e2; margin:var(--card-content-margin);">
-          r/programming (500 points) weekly
-        </div>
-        <div style="grid-area: e3; margin:var(--card-content-margin);">
-          ProductHunt (300 votes) weekly
-        </div>
-        <div class="rssCardTag">
+        </template>
+        <template slot="title-icons">
+          <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/social_channel_notifier')"/>
+        </template>
+        <template slot="description">
+        Im addicted to dev news, sadly for my preferred channels are no rss feed available... So I build my own custom
+        RSS-Feed, which notifies me when new hot shit is available. (look up each hour) Build with firebase and typescript. I tried
+        some "classic" OOP stuff with typescript (inheritance, mixins, template methods) ... and now the codebase looks
+        like shit.
+
+<!--          <div style="grid-area: e0; margin:var(&#45;&#45;card-content-margin);">-->
+<!--            Github-Trending (ts, js, everthing(all-topics)) weekly-->
+<!--          </div>-->
+<!--          <div style="grid-area: e1; margin:var(&#45;&#45;card-content-margin);">-->
+<!--            HN (>500)weekly-->
+<!--          </div>-->
+<!--          <div style="grid-area: e2; margin:var(&#45;&#45;card-content-margin);">-->
+<!--            r/programming (500 points) weekly-->
+<!--          </div>-->
+<!--          <div style="grid-area: e3; margin:var(&#45;&#45;card-content-margin);">-->
+<!--            ProductHunt (300 votes) weekly-->
+<!--          </div>-->
+        </template>
+        <template slot="tag">
           #ts #firebase #rss
-        </div>
-      </div>
+        </template>
+      </simple-card>
     </div>
 
     <h4 class="projectHeader">Wannarithm</h4>
@@ -83,14 +89,21 @@
 </template>
 
 <script>
-  import ChromeExtensionCard from '~/components/ChromeExtensionCard.vue'
+  import ImageCard from '~/components/ImageCard.vue'
+  import SimpleCard from '~/components/SimpleCard.vue'
 
   export default {
     components: {
-      ChromeExtensionCard
+      ImageCard,
+      SimpleCard
     },
     metaInfo: {
       title: 'My Github Projects'
+    },
+    methods: {
+      open(link) {
+        window.open(link, 'blank');
+      }
     }
   }
 </script>
@@ -103,54 +116,17 @@
     color: rgb(112, 112, 112);
   }
 
-  .gistExplorer /deep/ .chromeExtensionCardImage {
+  .gistExplorer /deep/ .ImageCardImage {
     background-color: greenyellow;
   }
-  .gistExplorer /deep/ .chromeExtensionCardIconContainer {
-    color: black;
-  }
 
-  .plussub /deep/ .chromeExtensionCardImage {
+  .plussub /deep/ .ImageCardImage {
     background-color: #5bc0de;
-  }
-  .plussub /deep/ .chromeExtensionCardIconContainer {
-    color: white;
   }
 
   .gistExplorer, .plussub {
     margin-top: 16px;
   }
 
-  .rssCard {
-    display: grid;
-    box-shadow: var(--card-shadow);
-    grid-template-areas:
-      '.'
-      'title'
-      'description'
-      '.'
-      'e0'
-      'e1'
-      'e2'
-      'e3'
-      'tag';
-    grid-template-rows: 8px 2em auto 16px 1.5em 1.5em 1.5em 1.5em 1.5em;
-    width: 800px;
-    background-color: white;
-  }
-
-  @media (min-width:960px) {
-    .rssCard {
-      width: 800px
-    }
-  }
-
-                                                                                 .rssCardTag {
-    grid-area: tag;
-    margin: var(--card-content-margin);
-    color: var(--card-tag-color);
-    font-size: var(--card-tag-font-size);
-    font-weight: var(--card-tag-font-weight);
-  }
 </style>
 
