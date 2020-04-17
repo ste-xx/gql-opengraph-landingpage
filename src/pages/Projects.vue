@@ -1,6 +1,6 @@
 <template>
   <Layout class="background-container">
-    <h1 style="font-size: 36pt; margin-bottom: 2rem;">Projects</h1>
+    <h1 style="font-size: 36pt; margin-bottom: 2rem;">Side Projects</h1>
     <h4 class="projectHeader">Chrome Extensions</h4>
 
     <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
@@ -119,6 +119,27 @@
       </image-card>
     </div>
 
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+      <simple-card class="gist">
+        <template slot="title">
+          Gists for the daily browsing
+        </template>
+        <template slot="description">
+          <div class="rssEntryGrid">
+            <div class="item" style="grid-area: e0;">
+              Search Github links in raw readme.md and generates repo fields for Githubs GQL-Endpoint
+            </div>
+            <div style="grid-area: e0-icon;" class="rssEntryIconContainer item">
+              <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://gist.github.com/ste-xx/a1af44103d81c694c48ed7f829799920')"/>
+            </div>
+          </div>
+        </template>
+        <template slot="tag">
+          #gists #gist-explorer
+        </template>
+      </simple-card>
+    </div>
+
     <h4 class="projectHeader">Algo Playground</h4>
     <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
       <simple-card class="hus">
@@ -224,7 +245,6 @@
     margin-top: 16px;
     grid-row-gap: 8px;
     grid-template-columns: auto 1.5em;
-    /*background-color: rgba(224,223,9,0.2);;*/
     grid-template-areas:
       "e0 e0-icon"
       "e1 e1-icon"
@@ -250,6 +270,31 @@
 
   .rssEntryGrid .item:nth-child(n+7):nth-child(-n+8) {
     background-color: rgba(224,223,9,0.2);;
+  }
+
+  .gist {
+    width: 350px;
+    margin-top: 16px;
+  }
+
+  .gistEntryGrid {
+    display: grid;
+    margin-top: 16px;
+    grid-row-gap: 8px;
+    grid-template-columns: auto 1.5em;
+    grid-template-areas: "e0 e0-icon";
+  }
+
+  .gistEntryHeader {
+    font-weight: 700;
+  }
+
+  .gistEntryIconContainer {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
   }
 
   .hus, .pathfinding, .stonePuzzle {
