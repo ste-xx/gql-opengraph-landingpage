@@ -130,7 +130,7 @@
               Search Github links in raw readme.md and generates repo fields for Githubs GQL-Endpoint
             </div>
             <div style="grid-area: e0-icon;" class="rssEntryIconContainer item">
-              <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://gist.github.com/ste-xx/a1af44103d81c694c48ed7f829799920')"/>
+              <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://gist.github.com/ste-xx/a1af44103d81c694c48ed7f829799920')"/>
             </div>
           </div>
         </template>
