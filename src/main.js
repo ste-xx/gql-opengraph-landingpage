@@ -4,7 +4,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faExternalLinkAlt, faRss } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'typeface-montserrat';
@@ -13,6 +13,7 @@ import 'typeface-montserrat';
 config.autoAddCss = false;
 library.add(faGithub);
 library.add(faExternalLinkAlt);
+library.add(faRss);
 
 export default function (Vue, { router, head, isClient }) {
   Vue.component('font-awesome', FontAwesomeIcon);
