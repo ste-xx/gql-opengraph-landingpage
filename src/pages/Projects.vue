@@ -18,8 +18,10 @@
           Gist Explorer
         </template>
         <template slot="description">
-          I hate searching for my gists on github to run them on the current page...So I build an additional
-          DevTool panel for my (and your) Gists.
+          <p>
+            I hate searching for my gists on github to run them on the current page...So I build an additional
+            DevTool panel for my (and your) Gists.
+          </p>
         </template>
         <template slot="tag">
           #devtool #js #vue
@@ -38,10 +40,12 @@
           +Sub
         </template>
         <template slot="description">
-          I need subtitle for my favorite series/movies and I don't count on the movie provider, which MAY
-          provide some subtitles... So I build an extension which can inject subtitles to HTML5 videos.
-          Either with a build in integration to <a href="https://opensubtitles.org" target="_blank">opensubtitles.org</a> or with
-          a file selection.
+          <p>
+            I need subtitle for my favorite series/movies and I don't count on the movie provider, which MAY
+            provide some subtitles... So I build an extension which can inject subtitles to HTML5 videos.
+            Either with a build in integration to <a href="https://opensubtitles.org" target="_blank">opensubtitles.org</a> or with
+            a file selection.
+          </p>
         </template>
         <template slot="tag">
           #subtitle #js #vue
@@ -64,9 +68,13 @@
           Custom RSS-Feed
         </template>
         <template slot="description">
-          Im addicted to dev news. Sadly, for my preferred channels are no RSS-Feed available... So I build my own custom
-          RSS-Feed, which notifies me when new hot shit is available. I build it with firebase and TypeScript and I tried
-          some "classic" OOP stuff with TypeScript (inheritance, mixins, template methods) ... and now I hate code base. ¯\_(ツ)_/¯
+          <p>
+            Im addicted to dev news. Sadly, for my preferred channels are no RSS-Feed available... So I build my own custom
+            RSS-Feed, which notifies me when new hot shit is available. I build it with firebase and TypeScript and I tried
+            some "classic" OOP stuff with TypeScript (inheritance, mixins, template methods) ... and now I hate code base. ¯\_(ツ)_/¯
+          </p>
+          <p>
+
           <div class="rssEntryGrid">
             <div class="item" style="grid-area: e0;">
               <div class="rssEntryHeader">
@@ -125,7 +133,7 @@
           Gists for the daily browsing
         </template>
         <template slot="description">
-          Optimized for the Chrome Dev Console.
+          <p>Optimized for the Chrome Dev Console.</p>
           <div class="rssEntryGrid">
             <div class="item" style="grid-area: e0;">
               Search Github links in raw readme.md and generates repo fields for Githubs GQL-Endpoint
@@ -151,10 +159,16 @@
           <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/hus')"/>
         </template>
         <template slot="description">
-          I like the game <a href="https://en.wikipedia.org/wiki/%C7%81Hus" target="_blank">Hus</a> and I lose to my wife every time.
-          Perfect time to learn machine learning, I thought.
-          So I tried to implement the  <a href="https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies" target="_blank">NEAT algorithm</a>.
-          We'll see where it goes...
+          <p>
+            I like the game <a href="https://en.wikipedia.org/wiki/%C7%81Hus" target="_blank">Hus</a> and I lose to my wife every f* time.
+          </p>
+          <p>
+            Perfect time to learn machine learning, I thought.
+            So I tried to implement the  <a href="https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies" target="_blank">NEAT algorithm</a>.
+          </p>
+          <p>
+            We'll see where it goes...
+          </p>
         </template>
         <template slot="tag">
           #ts #ml #neat
@@ -170,9 +184,11 @@
           <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/path-algorithm')"/>
         </template>
         <template slot="description">
-          I was interested in Kotlin, especially in the JavaScript transpiler. So instead of "Hello World", I implement some
-          pathfinding algorithm with visualization.
-          <div> A like Kotlin a lot, but Typescript with the types project, is simply not beatable. I don't want mai#</div>
+          <p>
+            I was interested in Kotlin, especially in the JavaScript transpiler. So instead of "Hello World", I implement some
+            pathfinding algorithm with visualization.
+            <div> A like Kotlin a lot, but Typescript with the types project, is simply not beatable. I don't want mai#</div>
+          </p>
         </template>
         <template slot="tag">
           #dijkstra #kotlin
@@ -188,10 +204,10 @@
           <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/stone-color-puzzle')"/>
         </template>
         <template slot="description">
-          <div style="margin-top: 1em">
+          <p>
           I was on this party and there was this puzzle lying around...
-          </div>
-          <div style="margin-top: 1em">
+          </p>
+          <div>
             <ul>
               <li> You have a 4x4 Field.</li>
               <li> Each field contains a stone </li>
@@ -201,11 +217,14 @@
               <li> Place each stone so that the places where the stones touch each other are always the same color</li>
             </ul>
           </div>
-          <div style="margin-top: 1em">
-          I haven't managed to solve it all evening... which was so ridiculous.
-          On the next morning I wrote a small script which solves it via backtracking.
-          Meh... stupid puzzle...
-          </div>
+          <p>
+            I haven't managed to solve it all evening...
+            Which was so ridiculous.
+          </p>
+          <p>
+            On the next morning I wrote a small script which solves it via backtracking.
+            Meh... stupid puzzle...
+          </p>
         </template>
         <template slot="tag">
           #backtracking #js

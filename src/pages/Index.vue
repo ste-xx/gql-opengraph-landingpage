@@ -5,7 +5,6 @@
     <h4 class="introduction_subheader">I’m Stefan (ste-xx) and I’m just a guy who loves to code and a wannapreneur</h4>
 
     <g-link class="nav__link" to="/projects/">side projects</g-link>
-    <g-link class="nav__link" to="/about/">about</g-link>
 
   </Layout>
 </template>

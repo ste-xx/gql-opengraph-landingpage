@@ -3,11 +3,10 @@
     <header class="header">
       <div style="display: flex;margin-left: 24px; margin-right: 24px; width: 100%; justify-content: space-between;">
         <strong>
-          <g-link to="/">STE-XX</g-link>
+          <g-link to="/">Stefan Breitenstein</g-link>
         </strong>
         <nav class="nav">
           <g-link class="nav__link" to="/projects/">side projects</g-link>
-          <g-link class="nav__link" to="/about/">about</g-link>
         </nav>
       </div>
     </header>

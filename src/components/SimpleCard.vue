@@ -24,7 +24,7 @@
         'title title-icons'
         'description description'
         'tag .';
-      grid-template-rows: 8px 2em auto 1.5em;
+      grid-template-rows: 8px 1em auto 1.5em;
       grid-template-columns: auto 4em;
       width: 800px;
       background-color: white;

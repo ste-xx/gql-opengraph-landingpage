@@ -27,10 +27,11 @@
     box-shadow: var(--card-shadow);
     grid-template-areas:
             'image image image'
+            '. . .'
             'title title title'
             'description description description'
             'tag . .';
-    grid-template-rows: 128px 2em auto 1.5em;
+    grid-template-rows: 128px 0.5em 1em auto 1.5em;
     width: 350px;
     background-color: white;
   }
