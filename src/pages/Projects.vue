@@ -19,8 +19,10 @@
         </template>
         <template slot="description">
           <p>
-            I hate searching for my gists on github to run them on the current page...So I build an additional
-            DevTool panel for my (and your) Gists.
+            I hate searching for my gists on github to run them on the current page...
+          </p>
+          <p>
+            So I build an additional DevTool panel for my (and your) Gists.
           </p>
         </template>
         <template slot="tag">
@@ -42,7 +44,10 @@
         <template slot="description">
           <p>
             I need subtitle for my favorite series/movies and I don't count on the movie provider, which MAY
-            provide some subtitles... So I build an extension which can inject subtitles to HTML5 videos.
+            provide some subtitles...
+          </p>
+          <p>
+            So I build an extension which can inject subtitles to HTML5 videos. <br>
             Either with a build in integration to <a href="https://opensubtitles.org" target="_blank">opensubtitles.org</a> or with
             a file selection.
           </p>
@@ -69,12 +74,16 @@
         </template>
         <template slot="description">
           <p>
-            Im addicted to dev news. Sadly, for my preferred channels are no RSS-Feed available... So I build my own custom
-            RSS-Feed, which notifies me when new hot shit is available. I build it with firebase and TypeScript and I tried
-            some "classic" OOP stuff with TypeScript (inheritance, mixins, template methods) ... and now I hate code base. ¯\_(ツ)_/¯
+            Im addicted to dev news. <br>
+            Sadly, for my preferred channels are no RSS-Feed available...
           </p>
           <p>
-
+            So I build my own custom RSS-Feed, which notifies me when new hot shit is available.
+          </p>
+          <p>
+            I build it with firebase and TypeScript and I tried
+            some "classic" OOP stuff with TypeScript (inheritance, mixins, template methods) ... and now I hate code base. ¯\_(ツ)_/¯
+          </p>
           <div class="rssEntryGrid">
             <div class="item" style="grid-area: e0;">
               <div class="rssEntryHeader">
@@ -184,11 +193,9 @@
           <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/path-algorithm')"/>
         </template>
         <template slot="description">
-          <p>
-            I was interested in Kotlin, especially in the JavaScript transpiler. So instead of "Hello World", I implement some
-            pathfinding algorithm with visualization.
-            <div> A like Kotlin a lot, but Typescript with the types project, is simply not beatable. I don't want mai#</div>
-          </p>
+          <p>I was interested in Kotlin, especially in the JavaScript transpiler.</p>
+          <p>So instead of "Hello World", I implement some pathfinding algorithm with visualization.</p>
+          <p>A like Kotlin a lot, but TypeScript with the <a href="https://github.com/DefinitelyTyped/DefinitelyTyped" target="_blank"> definitely typed project</a>, is simply not beatable. I don't want to maintain the types for third party tools myself.</p>
         </template>
         <template slot="tag">
           #dijkstra #kotlin
