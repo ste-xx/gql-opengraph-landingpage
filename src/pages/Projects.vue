@@ -38,11 +38,13 @@
           +Sub
         </template>
         <template slot="description">
-          I need subtitle for my favorite series/movies and i don't care which movie provider, which MAY
+          I need subtitle for my favorite series/movies and I don't count on the movie provider, which MAY
           provide some subtitles... So I build an extension which can inject subtitles to HTML5 videos.
+          Either with a build in integration to <a href="https://opensubtitles.org" target="_blank">opensubtitles.org</a> or with
+          a file selection.
         </template>
         <template slot="tag">
-          #subtitle #js #redux
+          #subtitle #js #vue
         </template>
       </image-card>
     </div>
@@ -59,14 +61,12 @@
           <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/social_channel_notifier')"/>
         </template>
         <template slot="title">
-          Custom Rss Feed
+          Custom RSS-Feed
         </template>
         <template slot="description">
-          Im addicted to dev news, sadly for my preferred channels are no rss feed available... So I build my own custom
-          RSS-Feed, which notifies me when new hot shit is available. (look up each hour) Build with firebase and typescript. I tried
-          some "classic" OOP stuff with typescript (inheritance, mixins, template methods) ... and now the codebase looks
-          like shit.
-
+          Im addicted to dev news. Sadly, for my preferred channels are no RSS-Feed available... So I build my own custom
+          RSS-Feed, which notifies me when new hot shit is available. I build it with firebase and TypeScript and I tried
+          some "classic" OOP stuff with TypeScript (inheritance, mixins, template methods) ... and now I hate code base. ¯\_(ツ)_/¯
           <div class="rssEntryGrid">
             <div class="item" style="grid-area: e0;">
               <div class="rssEntryHeader">
@@ -125,6 +125,7 @@
           Gists for the daily browsing
         </template>
         <template slot="description">
+          Optimized for the Chrome Dev Console.
           <div class="rssEntryGrid">
             <div class="item" style="grid-area: e0;">
               Search Github links in raw readme.md and generates repo fields for Githubs GQL-Endpoint
@@ -150,39 +151,61 @@
           <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/hus')"/>
         </template>
         <template slot="description">
-           hus
+          I like the game <a href="https://en.wikipedia.org/wiki/%C7%81Hus" target="_blank">Hus</a> and I lose to my wife every time.
+          Perfect time to learn machine learning, I thought.
+          So I tried to implement the  <a href="https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies" target="_blank">NEAT algorithm</a>.
+          We'll see where it goes...
         </template>
         <template slot="tag">
-          #ts #ml #rss
+          #ts #ml #neat
         </template>
       </simple-card>
 
       <simple-card class="pathfinding">
         <template slot="title">
-          Pathfinding algos
+          Pathfinding Algorithms
         </template>
         <template slot="title-icons">
           <font-awesome :icon="['fas', 'external-link-alt']" size="1x" style="margin-right: 8px" @click="open('https://amazing-wright-416994.netlify.app/')"/>
           <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/path-algorithm')"/>
         </template>
         <template slot="description">
-          path finding
+          I was interested in Kotlin, especially in the JavaScript transpiler. So instead of "Hello World", I implement some
+          pathfinding algorithm with visualization.
+          <div> A like Kotlin a lot, but Typescript with the types project, is simply not beatable. I don't want mai#</div>
         </template>
         <template slot="tag">
-          #dijkstra #ts
+          #dijkstra #kotlin
         </template>
       </simple-card>
 
       <simple-card class="stonePuzzle">
         <template slot="title">
-          Stone puzzle
+          Stone Color Puzzle
         </template>
         <template slot="title-icons">
           <font-awesome :icon="['fas', 'external-link-alt']" size="1x" style="margin-right: 8px" @click="open('https://amazing-wilson-449e80.netlify.app/')"/>
           <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/stone-color-puzzle')"/>
         </template>
         <template slot="description">
-          Stupid stone puzzle from the party
+          <div style="margin-top: 1em">
+          I was on this party and there was this puzzle lying around...
+          </div>
+          <div style="margin-top: 1em">
+            <ul>
+              <li> You have a 4x4 Field.</li>
+              <li> Each field contains a stone </li>
+              <li> Each stone is a square </li>
+              <li> A stone has a color on each side</li>
+              <li> You can take the stone out and place it wherever you want</li>
+              <li> Place each stone so that the places where the stones touch each other are always the same color</li>
+            </ul>
+          </div>
+          <div style="margin-top: 1em">
+          I haven't managed to solve it all evening... which was so ridiculous.
+          On the next morning I wrote a small script which solves it via backtracking.
+          Meh... stupid puzzle...
+          </div>
         </template>
         <template slot="tag">
           #backtracking #js
