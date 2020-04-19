@@ -4,10 +4,13 @@
     <div>
       <g-image style="object-fit: cover; border-radius:50%; float: left; margin-top: 1em; margin-right: 2em; " src="~/assets/avatar.jpg" width="120"/>
     </div>
-    <h4 class="introduction_subheader">I’m Stefan and I’m just a guy who loves to code.</h4>
+    <h4 class="introduction_subheader">I’m Stefan and just a guy who loves to code...</h4>
+    <p>
+      ...but I'm also interested in entrepreneurship, tech-startups and dev-news.
+      I love coding in general, but I'm primarily interested in serverless stuff.
+    </p>
     <p>
       I'm a dev-teamlead at <a href="https://www.tt-s.com/en/">tts</a> and work on <a href="https://www.loop.how/">loop</a>.
-      I'm interested in tech-startups and coding in general, but primarily in serverless stuff.
     </p>
     <span>
       Have a look on my private <g-link to="/projects/">side projects</g-link>.
