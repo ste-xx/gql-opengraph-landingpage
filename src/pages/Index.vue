@@ -2,17 +2,21 @@
   <Layout class="background-container">
     <h1 class="introduction">Hi There!</h1>
 
-    <h4 class="introduction_subheader">I’m Stefan (ste-xx) and I’m just a guy who loves to code and a wannapreneur</h4>
-
-    <g-link class="nav__link" to="/projects/">side projects</g-link>
-
+    <h4 class="introduction_subheader">I’m Stefan and I’m just a guy who loves to code and a wannapreneur</h4>
+    <p>
+      I'm a dev-teamlead at <a href="https://www.tt-s.com/en/">tts</a> and work on <a href="https://www.loop.how/">loop</a>.
+      I'm interested in tech-startups and coding in general, but primarily in serverless stuff.
+    </p>
+    <span>
+      Have a look on my private <g-link to="/projects/">side projects</g-link>.
+    </span>
   </Layout>
 </template>
 
 <script>
 export default {
   metaInfo: {
-    title: 'Ste-XX personal site'
+    title: 'Stefan Breitenstein personal site'
   }
 }
 </script>

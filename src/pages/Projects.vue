@@ -165,6 +165,7 @@
           NEAT Algorithm for Hus [WIP]
         </template>
         <template slot="title-icons">
+          <font-awesome :icon="['fas', 'external-link-alt']" size="1x" style="margin-right: 8px" @click="open('https://dreamy-lichterman-7f4985.netlify.app/')"/>
           <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/hus')"/>
         </template>
         <template slot="description">
