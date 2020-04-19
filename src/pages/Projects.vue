@@ -266,8 +266,9 @@
   .projectHeader {
     margin-bottom: 2.5rem;
     font-size: 32pt;
-    font-weight: normal;
     color: rgb(112, 112, 112);
+    font-weight: 700;
+    font-style: italic;
   }
 
   .gistExplorer /deep/ .ImageCardImage {
