@@ -1,15 +1,17 @@
 <template>
   <div class="layout background-container">
     <header class="header">
-      <div style="display: flex;margin-left: 24px; margin-right: 24px; width: 100%; justify-content: space-between; margin-top: 8px; margin-bottom: 8px">
-        <div style="display: flex; flex-wrap: wrap; width: 170px">
+      <div style="display: grid; grid-template-rows: auto; grid-template-columns: auto auto; width: 100%; justify-content: space-between; margin: 8px 24px;">
+        <div style="display: grid; grid-template-rows: repeat(2, 1.5em); grid-row-gap: 4px">
           <strong style="">
             <g-link to="/">Stefan Breitenstein</g-link>
           </strong>
-          <div style="">
-            <font-awesome :icon="['fab', 'github']" size="1x" style="margin-right: 8px" @click="open('https://github.com/ste-xx')"/>
-            <font-awesome :icon="['fab', 'linkedin']" size="1x" style="margin-right: 8px" @click="open('https://www.linkedin.com/in/stefan-breitenstein-10337a173/')"/>
-            <font-awesome :icon="['fab', 'twitter']" size="1x" @click="open('https://twitter.com/_____ste_____')"/>
+          <div style="display: grid; grid-template-rows: 1em; grid-template-columns: repeat(5, 2em)">
+            <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx')"/>
+            <font-awesome :icon="['fab', 'twitter']" size="1x"  @click="open('https://twitter.com/_____ste_____')"/>
+<!--            <font-awesome :icon="['fab', 'y-combinator']" size="1x"  @click="open('https://news.ycombinator.com/user?id=stexx')"/>-->
+<!--            <font-awesome :icon="['fab', 'reddit-square']" size="1x" @click="open('https://www.reddit.com/user/ste_xx')"/>-->
+            <font-awesome :icon="['fab', 'linkedin']" size="1x" @click="open('https://www.linkedin.com/in/stefan-breitenstein-10337a173/')"/>
           </div>
         </div>
         <nav class="nav">
