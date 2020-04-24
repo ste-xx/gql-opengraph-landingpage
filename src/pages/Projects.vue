@@ -5,19 +5,19 @@
 
     <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
       <image-card class="gistExplorer">
-        <template slot="image">
+        <template #image>
           <div style=" display: flex; align-items: center; justify-content: center;">
             <g-image src="~/assets/gistexplorerlogo.png" width="80" height="80"/>
           </div>
         </template>
-        <template slot="image-icons">
+        <template #image-icons>
           <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://chrome.google.com/webstore/detail/gist-devtool-explorer/egbmdjmhnblffjpfilldkklinjmflaag')"/>
           <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/gist-dev-tool-explorer')"/>
         </template>
-        <template slot="title">
+        <template #title>
           Gist Explorer
         </template>
-        <template slot="description">
+        <template #description>
           <p>
             I hate searching for my gists on github to run them on the current page...
           </p>
@@ -25,23 +25,23 @@
             So I build an additional DevTool panel for my (and your) Gists.
           </p>
         </template>
-        <template slot="tag">
+        <template #tag>
           #devtool #js #vue
         </template>
       </image-card>
 
       <image-card class="plussub">
-        <template slot="image">
+        <template #image>
           <g-image src="~/assets/plussublogo.png" width="128"/>
         </template>
-        <template slot="image-icons">
+        <template #image-icons>
           <font-awesome :icon="['fas', 'external-link-alt']" size="1x" style="color: white" @click="open('https://chrome.google.com/webstore/detail/%2Bsub/lpobdmdfgjokempajoobgfdnhjbjlnpm')"/>
           <font-awesome :icon="['fab', 'github']" size="1x" style="color: white" @click="open('https://github.com/plussub/plussub')"/>
         </template>
-        <template slot="title">
+        <template #title>
           +Sub
         </template>
-        <template slot="description">
+        <template #description>
           <p>
             I need subtitle for my favorite series/movies and I don't count on the movie provider, which MAY
             provide some subtitles...
@@ -52,7 +52,7 @@
             a file selection.
           </p>
         </template>
-        <template slot="tag">
+        <template #tag>
           #subtitle #js #vue
         </template>
       </image-card>
@@ -61,18 +61,18 @@
     <h4 class="projectHeader">Self Organization</h4>
     <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
       <image-card class="rss">
-        <template slot="image">
+        <template #image>
           <div style=" display: flex; align-items: center; justify-content: center;">
             <g-image src="~/assets/rsslogo.png" width="80" height="80"/>
           </div>
         </template>
-        <template slot="image-icons">
+        <template #image-icons>
           <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/social_channel_notifier')"/>
         </template>
-        <template slot="title">
+        <template #title>
           Custom RSS-Feed
         </template>
-        <template slot="description">
+        <template #description>
           <p>
             Im addicted to dev news. <br>
             Sadly, for my preferred channels are no RSS-Feed available...
@@ -84,53 +84,53 @@
             I build it with firebase and TypeScript and I tried
             some "classic" OOP stuff with TypeScript (inheritance, mixins, template methods) ... and now I hate code base. ¯\_(ツ)_/¯
           </p>
-          <div class="rssEntryGrid">
-            <div class="item" style="grid-area: e0;">
-              <div class="rssEntryHeader">
+          <link-grid>
+            <template #0-header>
                 Github-Trending
                 <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://github.com/trending')"/>
-               </div>
-               Notifies if a TypeScript, JavaScript or everything else (no filter applied), raises in the weekly trending.
-            </div>
-            <div style="grid-area: e0-icon;" class="rssEntryIconContainer item">
-                <font-awesome :icon="['fas', 'rss']" size="1x" @click="open('https://us-central1-social-channel-notifier.cloudfunctions.net/ghTrending_Rss')"/>
-            </div>
+            </template>
+            <template #0-description>
+              Notifies if a TypeScript, JavaScript or everything else (no filter applied), raises in the weekly trending.
+            </template>
+            <template #0-link>
+              <font-awesome :icon="['fas', 'rss']" size="1x" @click="open('https://us-central1-social-channel-notifier.cloudfunctions.net/ghTrending_Rss')"/>
+            </template>
 
-            <div class="item" style="grid-area: e1;">
-              <div class="rssEntryHeader">
-                HackerNews
-                <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://news.ycombinator.com/')"/>
-              </div>
+            <template #1-header>
+              HackerNews
+              <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://news.ycombinator.com/')"/>
+            </template>
+            <template #1-description>
               Notifies, if a post reach 500 points in the current week.
-            </div>
-            <div style="grid-area: e1-icon;" class="rssEntryIconContainer item">
+            </template>
+            <template #1-link>
               <font-awesome :icon="['fas', 'rss']" size="1x" @click="open('https://us-central1-social-channel-notifier.cloudfunctions.net/hackerNews_Rss')"/>
-            </div>
+            </template>
 
-            <div class="item" style="grid-area: e2;">
-              <div class="rssEntryHeader">
-                r/programming
-                <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://www.reddit.com/r/programming/')"/>
-              </div>
+            <template #2-header>
+              r/programming
+              <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://www.reddit.com/r/programming/')"/>
+            </template>
+            <template #2-description>
               Notifies, if a post reach 500 points in the current week.
-            </div>
-            <div style="grid-area: e2-icon;" class="rssEntryIconContainer item">
+            </template>
+            <template #2-link>
               <font-awesome :icon="['fas', 'rss']" size="1x" @click="open('https://us-central1-social-channel-notifier.cloudfunctions.net/reddit_Rss')"/>
-            </div>
+            </template>
 
-            <div class="item" style="grid-area: e3;">
-              <div class="rssEntryHeader">
-                ProductHunt
-                <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://www.producthunt.com/')"/>
-              </div>
+            <template #3-header>
+              ProductHunt
+              <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://www.producthunt.com/')"/>
+            </template>
+            <template #3-description>
               Notifies, if a post reach 300 votes week in the current week.
-            </div>
-            <div style="grid-area: e3-icon;"  class="rssEntryIconContainer item">
+            </template>
+            <template #3-link>
               <font-awesome :icon="['fas', 'rss']" size="1x" @click="open('https://us-central1-social-channel-notifier.cloudfunctions.net/productHunt_Rss')"/>
-            </div>
-          </div>
+            </template>
+          </link-grid>
         </template>
-        <template slot="tag">
+        <template #tag>
             #ts #firebase #rss
         </template>
       </image-card>
@@ -138,27 +138,28 @@
 
     <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
       <simple-card class="gist">
-        <template slot="title">
+        <template #title>
           Gists/Codepen for daily use
         </template>
-        <template slot="description">
+        <template #description>
           <p>Gists are optimized for the Chrome Dev Console.</p>
-          <div class="gistEntryGrid">
-            <div class="item" style="grid-area: e0;">
+          <link-grid>
+            <template #0-description>
               Search Github links in raw readme.md and generates repo fields for Githubs GQL-Endpoint
-            </div>
-            <div style="grid-area: e0-icon;" class="gistEntryIconContainer item">
+            </template>
+            <template #0-link>
               <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://gist.github.com/ste-xx/a1af44103d81c694c48ed7f829799920')"/>
-            </div>
-            <div class="item" style="grid-area: e1;">
+            </template>
+
+            <template #1-description>
               Filter Github repos with at least n-stars
-            </div>
-            <div style="grid-area: e1-icon;" class="gistEntryIconContainer item">
+            </template>
+            <template #1-link>
               <font-awesome :icon="['fab', 'codepen']" size="1x" @click="open('https://codepen.io/ste-xx/pen/pojebjQ')"/>
-            </div>
-          </div>
+            </template>
+          </link-grid>
         </template>
-        <template slot="tag">
+        <template #tag>
           #gists #gist-explorer
         </template>
       </simple-card>
@@ -167,14 +168,14 @@
     <h4 class="projectHeader">Algo Playground</h4>
     <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
       <simple-card class="hus">
-        <template slot="title">
+        <template #title>
           NEAT Algorithm for Hus [WIP]
         </template>
-        <template slot="title-icons">
+        <template #title-icons>
           <font-awesome :icon="['fas', 'external-link-alt']" size="1x" style="margin-right: 8px" @click="open('https://dreamy-lichterman-7f4985.netlify.app/')"/>
           <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/hus')"/>
         </template>
-        <template slot="description">
+        <template #description>
           <p>
             I like the game <a href="https://en.wikipedia.org/wiki/%C7%81Hus" target="_blank">Hus</a> and I lose to my wife every f* time.
           </p>
@@ -186,38 +187,38 @@
             We'll see where it goes...
           </p>
         </template>
-        <template slot="tag">
+        <template #tag>
           #ts #ml #neat
         </template>
       </simple-card>
 
       <simple-card class="pathfinding">
-        <template slot="title">
+        <template #title>
           Pathfinding Algorithms
         </template>
-        <template slot="title-icons">
+        <template #title-icons>
           <font-awesome :icon="['fas', 'external-link-alt']" size="1x" style="margin-right: 8px" @click="open('https://amazing-wright-416994.netlify.app/')"/>
           <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/path-algorithm')"/>
         </template>
-        <template slot="description">
+        <template #description>
           <p>I was interested in Kotlin, especially in the JavaScript transpiler.</p>
           <p>So instead of "Hello World", I implement some pathfinding algorithm with visualization.</p>
           <p>A like Kotlin a lot, but TypeScript with the <a href="https://github.com/DefinitelyTyped/DefinitelyTyped" target="_blank"> definitely typed project</a>, is simply not beatable. I don't want to maintain the types for third party tools myself.</p>
         </template>
-        <template slot="tag">
+        <template #tag>
           #dijkstra #kotlin
         </template>
       </simple-card>
 
       <simple-card class="stonePuzzle">
-        <template slot="title">
+        <template #title>
           Stone Color Puzzle
         </template>
-        <template slot="title-icons">
+        <template #title-icons>
           <font-awesome :icon="['fas', 'external-link-alt']" size="1x" style="margin-right: 8px" @click="open('https://amazing-wilson-449e80.netlify.app/')"/>
           <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/stone-color-puzzle')"/>
         </template>
-        <template slot="description">
+        <template #description>
           <p>
           I was on this party and there was this puzzle lying around...
           </p>
@@ -240,7 +241,7 @@
             Meh... stupid puzzle...
           </p>
         </template>
-        <template slot="tag">
+        <template #tag>
           #backtracking #js
         </template>
       </simple-card>
@@ -251,11 +252,13 @@
 <script>
   import ImageCard from '~/components/ImageCard.vue'
   import SimpleCard from '~/components/SimpleCard.vue'
+  import LinkGrid from "../components/LinkGrid.vue";
 
   export default {
     components: {
+      LinkGrid,
       ImageCard,
-      SimpleCard
+      SimpleCard,
     },
     metaInfo: {
       title: 'My Github Projects'
@@ -297,36 +300,8 @@
     background-color: #e0df09;
   }
 
-  .rssEntryGrid {
-    display: grid;
-    margin-top: 16px;
-    grid-row-gap: 8px;
-    grid-template-columns: auto 1.5em;
-    grid-template-areas:
-      "e0 e0-icon"
-      "e1 e1-icon"
-      "e2 e2-icon"
-      "e3 e3-icon";
-  }
-
-  .rssEntryHeader {
-    font-weight: 700;
-  }
-
-  .rssEntryIconContainer {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .rssEntryGrid .item:nth-child(n+3):nth-child(-n+4) {
-    background-color: rgba(224,223,9,0.2);;
-  }
-
-  .rssEntryGrid .item:nth-child(n+7):nth-child(-n+8) {
-    background-color: rgba(224,223,9,0.2);;
+  .rss /deep/ .linkGridEntry {
+    --contrast-background-color: rgba(224,223,9,0.2);
   }
 
   .gist {
@@ -334,26 +309,8 @@
     margin-top: 16px;
   }
 
-  .gistEntryGrid {
-    display: grid;
-    margin-top: 16px;
-    grid-row-gap: 8px;
-    grid-template-columns: auto 1.5em;
-    grid-template-areas:
-            "e0 e0-icon"
-            "e1 e1-icon";
-  }
-
-  .gistEntryHeader {
-    font-weight: 700;
-  }
-
-  .gistEntryIconContainer {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
+  .gist /deep/ .linkGridEntry {
+    --contrast-background-color: #efefef
   }
 
   .hus, .pathfinding, .stonePuzzle {
