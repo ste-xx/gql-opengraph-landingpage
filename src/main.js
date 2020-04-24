@@ -5,7 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faExternalLinkAlt, faRss } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faWikipediaW, faLinkedin, faTwitter, faRedditSquare, faYCombinator} from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faWikipediaW, faLinkedin, faTwitter, faRedditSquare, faYCombinator, faCodepen} from '@fortawesome/free-brands-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'typeface-montserrat';
 
@@ -18,7 +18,8 @@ import 'typeface-montserrat';
   faWikipediaW,
   faTwitter,
   faRedditSquare,
-  faYCombinator
+  faYCombinator,
+  faCodepen
 ].forEach((e) => library.add(e))
 // external-link-alt
 config.autoAddCss = false;

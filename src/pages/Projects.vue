@@ -139,16 +139,22 @@
     <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
       <simple-card class="gist">
         <template slot="title">
-          Gists for the daily browsing
+          Gists/Codepen for daily use
         </template>
         <template slot="description">
-          <p>Optimized for the Chrome Dev Console.</p>
-          <div class="rssEntryGrid">
+          <p>Gists are optimized for the Chrome Dev Console.</p>
+          <div class="gistEntryGrid">
             <div class="item" style="grid-area: e0;">
               Search Github links in raw readme.md and generates repo fields for Githubs GQL-Endpoint
             </div>
-            <div style="grid-area: e0-icon;" class="rssEntryIconContainer item">
+            <div style="grid-area: e0-icon;" class="gistEntryIconContainer item">
               <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://gist.github.com/ste-xx/a1af44103d81c694c48ed7f829799920')"/>
+            </div>
+            <div class="item" style="grid-area: e1;">
+              Filter Github repos with at least n-stars
+            </div>
+            <div style="grid-area: e1-icon;" class="gistEntryIconContainer item">
+              <font-awesome :icon="['fab', 'codepen']" size="1x" @click="open('https://codepen.io/ste-xx/pen/pojebjQ')"/>
             </div>
           </div>
         </template>
@@ -333,7 +339,9 @@
     margin-top: 16px;
     grid-row-gap: 8px;
     grid-template-columns: auto 1.5em;
-    grid-template-areas: "e0 e0-icon";
+    grid-template-areas:
+            "e0 e0-icon"
+            "e1 e1-icon";
   }
 
   .gistEntryHeader {
