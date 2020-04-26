@@ -157,6 +157,13 @@
             <template #1-link>
               <font-awesome :icon="['fab', 'codepen']" size="1x" @click="open('https://codepen.io/ste-xx/pen/pojebjQ')"/>
             </template>
+
+            <template #2-description>
+              Inspired by this <a href="https://xkcd.com/1205/">xkcd</a>. Is it worth the time to solve a problem? This Gist will answer your question.
+            </template>
+            <template #2-link>
+              <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://gist.github.com/ste-xx/92d0158f8efad882254d4f87cab7d9f7')"/>
+            </template>
           </link-grid>
         </template>
         <template #tag>
