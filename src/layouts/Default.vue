@@ -21,10 +21,19 @@
     </header>
     <div class="header-spacer">&nbsp;</div>
     <slot/>
+    <svg class="bgPosSquare" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100%" height="100%" fill-opacity="var(--background-wave-opacity)" fill="var(--background-wave-color)"/>
+    </svg>
+    <svg class="bgPosWave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="var(--background-wave-color)" fill-opacity="var(--background-wave-opacity)" d="M0,224L60,202.7C120,181,240,139,360,133.3C480,128,600,160,720,165.3C840,171,960,149,1080,122.7C1200,96,1320,64,1380,48L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
   </div>
 </template>
 <script>
   export default {
+      data() {
+          return {
+              startWave: 50
+          }
+      },
     methods: {
       open(link) {
         window.open(link, 'blank');
@@ -57,6 +66,11 @@ body {
   --card-tag-color: blue;
   --card-tag-font-size: 0.7em;
   --card-tag-font-weight: 700;
+
+  /*efeeff*/
+  --background-wave-color: #a2d9ff;
+  --background-wave-opacity: 0.5;
+  --background-wave-start-wave: 20vh
 }
 
 .layout {
@@ -95,9 +109,24 @@ body {
 
 .background-container {
   padding-bottom: 4rem;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjM3NSIgaGVpZ2h0PSI4MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8IS0tIENyZWF0ZWQgd2l0aCBTVkctZWRpdCAtIGh0dHBzOi8vZ2l0aHViLmNvbS9TVkctRWRpdC9zdmdlZGl0LS0+CiA8ZyBjbGFzcz0ibGF5ZXIiPgogIDx0aXRsZT5MYXllciAxPC90aXRsZT4KICA8cGF0aCBkPSJtMi4wOTk2ODEsNy4wMzA5NDVsMzcwLjY4ODYxNSwtNS4yOTY3NTlsMC4zMTE3MTQsMjA4LjExNjY4MWMtMjM1LjQ0NzU1NCw4LjUyOTk5MiAtMTM4LjY0MDE4LDExNy42MTYyODkgLTM3MS4xMTE4ODgsMTIyLjUwNjUwNiIgZmlsbD0iI2VmZWVmZiIgaWQ9InN2Z183IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMCIvPgogPC9nPgo8L3N2Zz4=);
   background-size: 100% 100vh;
   background-position: right top;
   background-repeat: no-repeat;
+}
+
+.bgPosSquare {
+  position: absolute;
+  height: var(--background-wave-start-wave);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+}
+.bgPosWave {
+  position: absolute;
+  top: var(--background-wave-start-wave);
+  left: 0;
+  z-index: -1;
+  width: 100vw;
 }
 </style>
