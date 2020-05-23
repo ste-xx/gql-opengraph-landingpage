@@ -1,6 +1,6 @@
 <template>
   <Layout class="background-container">
-    <h1 style="font-size: 36pt; margin-bottom: 2rem;">Side Projects</h1>
+    <h1 class="pageHeader">Side Projects</h1>
     <h4 class="projectHeader">Chrome Extensions</h4>
 
     <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
@@ -279,9 +279,16 @@
 </script>
 
 <style scoped>
+  .pageHeader {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(19pt, 6vh, 36pt);
+    margin: 2rem 0 0;
+  }
+
   .projectHeader {
-    margin-bottom: 2.5rem;
-    font-size: 32pt;
+    font-family: 'Raleway', sans-serif;
+    margin: min(2rem, 16px) 0 0;
+    font-size: clamp(16pt, 4vh, 32pt);
     color: rgb(112, 112, 112);
     font-weight: 700;
     font-style: italic;
@@ -297,10 +304,7 @@
 
   .gistExplorer, .plussub {
     margin-top: 16px;
-  }
-
-  .rss {
-    width: 800px
+    width: clamp(33%, 350px, 500px);
   }
 
   .rss /deep/ .ImageCardImage {
@@ -311,8 +315,9 @@
     --contrast-background-color: rgba(224,223,9,0.2);
   }
 
+  .rss,
   .gist {
-    width: 350px;
+    width: clamp(70%, 350px, 1000px);
     margin-top: 16px;
   }
 
@@ -321,8 +326,8 @@
   }
 
   .hus, .pathfinding, .stonePuzzle {
-    width: 350px;
     margin-top: 16px;
+    width: clamp(25%, 350px, 400px);
   }
 
 </style>

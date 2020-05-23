@@ -40,6 +40,7 @@
     }
 
     .linkGridEntryHeader {
+        font-family: var(--card-title-font-family);
         font-weight: 700;
     }
 

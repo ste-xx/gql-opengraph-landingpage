@@ -52,7 +52,8 @@ body {
 :root {
   --card-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   --card-content-margin: 0 8px;
-  --card-title-font-weight: 700;
+  --card-title-font-weight: 800;
+  --card-title-font-family: 'Raleway', sans-serif;
   --card-tag-color: blue;
   --card-tag-font-size: 0.7em;
   --card-tag-font-weight: 700;

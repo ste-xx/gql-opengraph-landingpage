@@ -32,6 +32,7 @@
 
   .SimpleCardTitle {
       grid-area: title;
+      font-family: var(--card-title-font-family);
       font-weight: var(--card-title-font-weight);
       margin: var(--card-content-margin);
   }

@@ -37,9 +37,11 @@ export default {
 }
 
 .introduction_subheader {
-  margin-bottom: 2.5rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-style: italic;
   font-size: 32pt;
-  font-weight: normal;
   color: rgb(112, 112, 112);
+  margin-bottom: min(2.5rem, 16px);
 }
 </style>
