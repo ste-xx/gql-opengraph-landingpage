@@ -39,8 +39,8 @@
             :lineOpacity="0.4"
             :linesDistance="150"
             :moveSpeed="3"
-            :hoverEffect="true"
-            hoverMode="grab"
+            :hoverEffect="false"
+            hoverMode="repulse"
             :clickEffect="true"
             clickMode="push"
     >
