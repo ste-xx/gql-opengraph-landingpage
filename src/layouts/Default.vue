@@ -25,15 +25,40 @@
       <rect width="100%" height="100%" fill-opacity="var(--background-wave-opacity)" fill="var(--background-wave-color)"/>
     </svg>
     <svg class="bgPosWave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="var(--background-wave-color)" fill-opacity="var(--background-wave-opacity)" d="M0,224L60,202.7C120,181,240,139,360,133.3C480,128,600,160,720,165.3C840,171,960,149,1080,122.7C1200,96,1320,64,1380,48L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+    <particles
+            style="position: absolute; top: 0; left: 0; z-index: -1; height: 200px; width: 100vw;"
+            id="tsparticles"
+            color="#000000"
+            :particleOpacity="0.7"
+            :particlesNumber="80"
+            shapeType="circle"
+            :particleSize="4"
+            linesColor="#dedede"
+            :linesWidth="1"
+            :lineLinked="true"
+            :lineOpacity="0.4"
+            :linesDistance="150"
+            :moveSpeed="3"
+            :hoverEffect="true"
+            hoverMode="grab"
+            :clickEffect="true"
+            clickMode="push"
+    >
+    </particles>
   </div>
 </template>
 <script>
+    import Particles from 'particles.vue';
+
   export default {
-      data() {
-          return {
-              startWave: 50
-          }
-      },
+     components: {
+        Particles
+    },
+    data() {
+      return {
+        startWave: 50
+       }
+    },
     methods: {
       open(link) {
         window.open(link, 'blank');

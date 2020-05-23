@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "gridsome": "^0.7.0",
+    "particles.vue": "^1.14.3",
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
