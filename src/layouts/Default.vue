@@ -81,17 +81,21 @@ body {
   padding:0;
   line-height: 1.5;
   font-family: Montserrat;
+  color: #817e7e;
 }
 
 :root {
+  --header-color: rgb(63, 63, 63);
+
   --card-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  --card-content-margin: 0 8px;
-  --card-title-font-weight: 800;
+  --card-title-color: rgb(63, 63, 63);
+  --card-title-font-size: clamp(12pt, 3vh, 24pt);
+  --card-title-font-weight: 600;
   --card-title-font-family: 'Raleway', sans-serif;
+  --card-content-margin: 0 8px;
   --card-tag-color: blue;
   --card-tag-font-size: 0.7em;
   --card-tag-font-weight: 700;
-
   /*efeeff*/
   --background-wave-color: #a2d9ff;
   --background-wave-opacity: 0.5;

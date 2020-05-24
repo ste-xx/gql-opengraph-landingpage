@@ -41,7 +41,7 @@ export default {
   font-weight: 600;
   font-style: italic;
   font-size: 32pt;
-  color: rgb(112, 112, 112);
+  color: var(--header-color);
   margin-bottom: min(2.5rem, 16px);
 }
 </style>

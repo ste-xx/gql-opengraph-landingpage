@@ -24,14 +24,16 @@
         'title title-icons'
         'description description'
         'tag .';
-      grid-template-rows: 8px 1em auto 1.5em;
-      grid-template-columns: auto 4em;
+      grid-template-rows: min(2rem, 16px) auto auto 1.5em;
+      grid-template-columns: auto 8em;
       width: 800px;
       background-color: white;
   }
 
   .SimpleCardTitle {
       grid-area: title;
+      color: var(--card-title-color);
+      font-size: var(--card-title-font-size);
       font-family: var(--card-title-font-family);
       font-weight: var(--card-title-font-weight);
       margin: var(--card-content-margin);

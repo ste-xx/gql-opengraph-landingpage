@@ -31,7 +31,7 @@
             'title title title'
             'description description description'
             'tag . .';
-    grid-template-rows: 128px 0.5em 1em auto 1.5em;
+    grid-template-rows: 128px min(2rem, 16px) 1em auto 1.5em;
     width: 350px;
     background-color: white;
   }
@@ -62,6 +62,8 @@
   }
 
   .ImageCardTitle {
+    color: var(--card-title-color);
+    font-size: var(--card-title-font-size);
     grid-area: title;
     align-self: center;
     font-family: var(--card-title-font-family);

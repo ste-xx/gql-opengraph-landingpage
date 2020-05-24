@@ -5,7 +5,9 @@
             <div class="linkGridEntryHeader">
                 <slot :name="`${item}-header`"/>
             </div>
-            <slot :name="`${item}-description`"/>
+            <div style="margin-top: 8px;">
+                <slot :name="`${item}-description`"/>
+            </div>
         </div>
         <div v-for="(item, index) in getRootSlots()"
              :style="`grid-area: e${index}-icon; background-color:${index % 2 !== 0 ? 'var(--contrast-background-color)' : ''}`"
@@ -40,8 +42,10 @@
     }
 
     .linkGridEntryHeader {
+        color: var(--card-title-color);
+        font-size: 15pt;
         font-family: var(--card-title-font-family);
-        font-weight: 700;
+        font-weight: calc(var(--card-title-font-weight));
     }
 
     .linkGridEntryIconContainer {
@@ -50,6 +54,7 @@
         align-items: center;
         width: 100%;
         justify-content: center;
+        color: var(--header-color)
     }
 
 </style>

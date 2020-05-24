@@ -11,8 +11,8 @@
           </div>
         </template>
         <template #image-icons>
-          <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://chrome.google.com/webstore/detail/gist-devtool-explorer/egbmdjmhnblffjpfilldkklinjmflaag')"/>
-          <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/gist-dev-tool-explorer')"/>
+          <font-awesome :icon="['fas', 'external-link-alt']" size="lg" @click="open('https://chrome.google.com/webstore/detail/gist-devtool-explorer/egbmdjmhnblffjpfilldkklinjmflaag')"/>
+          <font-awesome :icon="['fab', 'github']" size="lg" @click="open('https://github.com/ste-xx/gist-dev-tool-explorer')"/>
         </template>
         <template #title>
           Gist Explorer
@@ -35,8 +35,8 @@
           <g-image src="~/assets/plussublogo.png" width="128"/>
         </template>
         <template #image-icons>
-          <font-awesome :icon="['fas', 'external-link-alt']" size="1x" style="color: white" @click="open('https://chrome.google.com/webstore/detail/%2Bsub/lpobdmdfgjokempajoobgfdnhjbjlnpm')"/>
-          <font-awesome :icon="['fab', 'github']" size="1x" style="color: white" @click="open('https://github.com/plussub/plussub')"/>
+          <font-awesome :icon="['fas', 'external-link-alt']" size="lg" style="color: white" @click="open('https://chrome.google.com/webstore/detail/%2Bsub/lpobdmdfgjokempajoobgfdnhjbjlnpm')"/>
+          <font-awesome :icon="['fab', 'github']" size="lg" style="color: white" @click="open('https://github.com/plussub/plussub')"/>
         </template>
         <template #title>
           +Sub
@@ -67,7 +67,7 @@
           </div>
         </template>
         <template #image-icons>
-          <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/social_channel_notifier')"/>
+          <font-awesome :icon="['fab', 'github']" size="lg" @click="open('https://github.com/ste-xx/social_channel_notifier')"/>
         </template>
         <template #title>
           Custom RSS-Feed
@@ -87,46 +87,46 @@
           <link-grid>
             <template #0-header>
                 Github-Trending
-                <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://github.com/trending')"/>
+                <font-awesome :icon="['fas', 'external-link-alt']" size="xs" @click="open('https://github.com/trending')"/>
             </template>
             <template #0-description>
               Notifies if a TypeScript, JavaScript or everything else (no filter applied), raises in the weekly trending.
             </template>
             <template #0-link>
-              <font-awesome :icon="['fas', 'rss']" size="1x" @click="open('https://us-central1-social-channel-notifier.cloudfunctions.net/ghTrending_Rss')"/>
+              <font-awesome :icon="['fas', 'rss']" size="lg" @click="open('https://us-central1-social-channel-notifier.cloudfunctions.net/ghTrending_Rss')"/>
             </template>
 
             <template #1-header>
               HackerNews
-              <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://news.ycombinator.com/')"/>
+              <font-awesome :icon="['fas', 'external-link-alt']" size="xs" @click="open('https://news.ycombinator.com/')"/>
             </template>
             <template #1-description>
               Notifies, if a post reach 500 points in the current week.
             </template>
             <template #1-link>
-              <font-awesome :icon="['fas', 'rss']" size="1x" @click="open('https://us-central1-social-channel-notifier.cloudfunctions.net/hackerNews_Rss')"/>
+              <font-awesome :icon="['fas', 'rss']" size="lg" @click="open('https://us-central1-social-channel-notifier.cloudfunctions.net/hackerNews_Rss')"/>
             </template>
 
             <template #2-header>
               r/programming
-              <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://www.reddit.com/r/programming/')"/>
+              <font-awesome :icon="['fas', 'external-link-alt']" size="xs" @click="open('https://www.reddit.com/r/programming/')"/>
             </template>
             <template #2-description>
               Notifies, if a post reach 500 points in the current week.
             </template>
             <template #2-link>
-              <font-awesome :icon="['fas', 'rss']" size="1x" @click="open('https://us-central1-social-channel-notifier.cloudfunctions.net/reddit_Rss')"/>
+              <font-awesome :icon="['fas', 'rss']" size="lg" @click="open('https://us-central1-social-channel-notifier.cloudfunctions.net/reddit_Rss')"/>
             </template>
 
             <template #3-header>
               ProductHunt
-              <font-awesome :icon="['fas', 'external-link-alt']" size="1x" @click="open('https://www.producthunt.com/')"/>
+              <font-awesome :icon="['fas', 'external-link-alt']" size="xs" @click="open('https://www.producthunt.com/')"/>
             </template>
             <template #3-description>
               Notifies, if a post reach 300 votes week in the current week.
             </template>
             <template #3-link>
-              <font-awesome :icon="['fas', 'rss']" size="1x" @click="open('https://us-central1-social-channel-notifier.cloudfunctions.net/productHunt_Rss')"/>
+              <font-awesome :icon="['fas', 'rss']" size="lg" @click="open('https://us-central1-social-channel-notifier.cloudfunctions.net/productHunt_Rss')"/>
             </template>
           </link-grid>
         </template>
@@ -148,21 +148,21 @@
               Search Github links in raw readme.md and generates repo fields for Githubs GQL-Endpoint
             </template>
             <template #0-link>
-              <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://gist.github.com/ste-xx/a1af44103d81c694c48ed7f829799920')"/>
+              <font-awesome style="color:var(--header-color)" :icon="['fab', 'github']" size="lg" @click="open('https://gist.github.com/ste-xx/a1af44103d81c694c48ed7f829799920')"/>
             </template>
 
             <template #1-description>
               Filter Github repos with at least n-stars
             </template>
             <template #1-link>
-              <font-awesome :icon="['fab', 'codepen']" size="1x" @click="open('https://codepen.io/ste-xx/pen/pojebjQ')"/>
+              <font-awesome style="color:var(--header-color)" :icon="['fab', 'codepen']" size="lg" @click="open('https://codepen.io/ste-xx/pen/pojebjQ')"/>
             </template>
 
             <template #2-description>
               Inspired by this <a href="https://xkcd.com/1205/">xkcd</a>. Is it worth the time to solve a problem? This Gist will answer your question.
             </template>
             <template #2-link>
-              <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://gist.github.com/ste-xx/92d0158f8efad882254d4f87cab7d9f7')"/>
+              <font-awesome style="color:var(--header-color)" :icon="['fab', 'github']" size="lg" @click="open('https://gist.github.com/ste-xx/92d0158f8efad882254d4f87cab7d9f7')"/>
             </template>
           </link-grid>
         </template>
@@ -179,8 +179,8 @@
           NEAT Algorithm for Hus [WIP]
         </template>
         <template #title-icons>
-          <font-awesome :icon="['fas', 'external-link-alt']" size="1x" style="margin-right: 8px" @click="open('https://dreamy-lichterman-7f4985.netlify.app/')"/>
-          <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/hus')"/>
+          <font-awesome style="margin-right: 8px; color:var(--header-color)" :icon="['fas', 'external-link-alt']" size="lg" @click="open('https://dreamy-lichterman-7f4985.netlify.app/')"/>
+          <font-awesome style="color:var(--header-color)" :icon="['fab', 'github']" size="lg" @click="open('https://github.com/ste-xx/hus')"/>
         </template>
         <template #description>
           <p>
@@ -204,8 +204,8 @@
           Pathfinding Algorithms
         </template>
         <template #title-icons>
-          <font-awesome :icon="['fas', 'external-link-alt']" size="1x" style="margin-right: 8px" @click="open('https://amazing-wright-416994.netlify.app/')"/>
-          <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/path-algorithm')"/>
+          <font-awesome style="margin-right: 8px; color:var(--header-color)" :icon="['fas', 'external-link-alt']" size="lg" @click="open('https://amazing-wright-416994.netlify.app/')"/>
+          <font-awesome style="color:var(--header-color)" :icon="['fab', 'github']" size="lg" @click="open('https://github.com/ste-xx/path-algorithm')"/>
         </template>
         <template #description>
           <p>I was interested in Kotlin, especially in the JavaScript transpiler.</p>
@@ -222,8 +222,8 @@
           Stone Color Puzzle
         </template>
         <template #title-icons>
-          <font-awesome :icon="['fas', 'external-link-alt']" size="1x" style="margin-right: 8px" @click="open('https://amazing-wilson-449e80.netlify.app/')"/>
-          <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx/stone-color-puzzle')"/>
+          <font-awesome style="margin-right: 8px; color:var(--header-color)" :icon="['fas', 'external-link-alt']" size="lg" @click="open('https://amazing-wilson-449e80.netlify.app/')"/>
+          <font-awesome style="color:var(--header-color)" :icon="['fab', 'github']" size="lg" @click="open('https://github.com/ste-xx/stone-color-puzzle')"/>
         </template>
         <template #description>
           <p>
@@ -280,16 +280,17 @@
 
 <style scoped>
   .pageHeader {
+    color: var(--header-color);
     font-family: 'Raleway', sans-serif;
     font-size: clamp(19pt, 6vh, 36pt);
     margin: 2rem 0 0;
   }
 
   .projectHeader {
+    color: var(--header-color);
     font-family: 'Raleway', sans-serif;
     margin: min(2rem, 16px) 0 0;
     font-size: clamp(16pt, 4vh, 32pt);
-    color: rgb(112, 112, 112);
     font-weight: 700;
     font-style: italic;
   }
