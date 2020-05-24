@@ -68,6 +68,7 @@
     align-self: center;
     font-family: var(--card-title-font-family);
     font-weight: var(--card-title-font-weight);
+    line-height: var(--card-title-line-height);
     margin: var(--card-content-margin);
   }
 

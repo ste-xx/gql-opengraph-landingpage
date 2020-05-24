@@ -46,6 +46,7 @@
         font-size: 15pt;
         font-family: var(--card-title-font-family);
         font-weight: calc(var(--card-title-font-weight));
+        line-height: var(--card-title-line-height);
     }
 
     .linkGridEntryIconContainer {

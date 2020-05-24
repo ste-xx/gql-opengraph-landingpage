@@ -41,7 +41,7 @@
             :moveSpeed="3"
             :hoverEffect="false"
             hoverMode="repulse"
-            :clickEffect="true"
+            :clickEffect="false"
             clickMode="push"
     >
     </particles>
@@ -92,6 +92,7 @@ body {
   --card-title-font-size: clamp(12pt, 3vh, 24pt);
   --card-title-font-weight: 600;
   --card-title-font-family: 'Raleway', sans-serif;
+  --card-title-line-height: 1.2;
   --card-content-margin: 0 8px;
   --card-tag-color: blue;
   --card-tag-font-size: 0.7em;
