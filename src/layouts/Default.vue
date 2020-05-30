@@ -4,18 +4,13 @@
       <div style="display: grid; grid-template-rows: auto; grid-template-columns: auto auto; width: 100%; justify-content: space-between; margin: 8px 24px;">
         <div style="display: grid; grid-template-rows: repeat(2, 1.5em); grid-row-gap: 4px">
           <strong style="">
-            <g-link to="/">Stefan Breitenstein</g-link>
+            <g-link to="/">OpenGQL</g-link>
           </strong>
-          <div style="display: grid; grid-template-rows: 1em; grid-template-columns: repeat(5, 2em)">
-            <font-awesome :icon="['fab', 'github']" size="1x" @click="open('https://github.com/ste-xx')"/>
-            <font-awesome :icon="['fab', 'twitter']" size="1x"  @click="open('https://twitter.com/_____ste_____')"/>
-<!--            <font-awesome :icon="['fab', 'y-combinator']" size="1x"  @click="open('https://news.ycombinator.com/user?id=stexx')"/>-->
-<!--            <font-awesome :icon="['fab', 'reddit-square']" size="1x" @click="open('https://www.reddit.com/user/ste_xx')"/>-->
-            <font-awesome :icon="['fab', 'linkedin']" size="1x" @click="open('https://www.linkedin.com/in/stefan-breitenstein-10337a173/')"/>
-          </div>
         </div>
         <nav class="nav">
-          <g-link class="nav__link" to="/projects/">side projects</g-link>
+          <a class="nav__link" href="#product">product</a>
+          <a class="nav__link" href="#useCases">use cases</a>
+          <a class="nav__link" href="#pricing">pricing</a>
         </nav>
       </div>
     </header>
@@ -42,9 +37,10 @@
             :hoverEffect="false"
             hoverMode="repulse"
             :clickEffect="false"
-            clickMode="push"
-    >
-    </particles>
+            clickMode="push"/>
+    <footer>
+      <g-link to="/impressum">Impressum information</g-link>
+    </footer>
   </div>
 </template>
 <script>
@@ -134,7 +130,7 @@ body {
 }
 
 .nav__link {
-  margin-left: 20px;
+  margin-left: 16px;
 }
 
 .background-container {
