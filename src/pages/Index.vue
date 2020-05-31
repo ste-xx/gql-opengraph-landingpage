@@ -12,19 +12,21 @@
             <div>Create preview links like in whatsapp or facebook from your app.</div>
             <div>Get relevant infos about a link.</div>
         </div>
-        <div class="gettingStarted" style="clear: both; margin-top: 16px;">
-            <h6 class="font-xl-alt">
+        <div class="gettingStarted">
+            <h6 class="font-l-alt">
                 Getting Started
             </h6>
             <div>
                 <preview-card style="width: 100%">
-                    <template #title>
-                        Insert a URL and see the preview
-                    </template>
                     <template #description>
-                        <div class="input-field">
-                          <input placeholder="Insert a URL and see the preview" id="previewUrl" type="text" class="validate">
-                          <label for="previewUrl">Url</label>
+                        <div>
+                            <div class="input-field">
+                                <input placeholder="Insert a URL and see the preview" id="previewUrl" type="text">
+                                <label for="previewUrl">Url</label>
+                            </div>
+
+                            <a style="font-size: 1.2rem" href="https://opengraph.stefanbreitenstein.workers.dev/___graphql"
+                               target="_blank">Show in GraphiQL ></a>
                         </div>
                     </template>
                 </preview-card>
@@ -33,8 +35,6 @@
             </div>
         </div>
         <div>
-            <a class="font-xl-alt" href="https://opengraph.stefanbreitenstein.workers.dev/___graphql"
-               target="_blank">Show in GraphiQL</a>
         </div>
         <div>
             compare:
@@ -61,8 +61,7 @@
     metaInfo: {
       title: 'Open Graph meets GraphQL'
     },
-    methods: {
-    }
+    methods: {}
   }
 </script>
 
@@ -82,12 +81,16 @@
     }
 
     .gettingStarted {
-        font-size: 36pt;
+        margin-top: 32px;
         margin-bottom: 2rem;
     }
 
     .font-l {
         font-size: 1.3em;
+    }
+
+    .font-l-alt {
+        font-size: 32pt;
     }
 
     .font-xl {
