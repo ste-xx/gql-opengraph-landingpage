@@ -1,6 +1,6 @@
 <template>
   <div class="planContainer">
-      <div>fundamental more required requests</div>
+      <div>fundamental more requests</div>
       <div>or</div>
       <div>special requirements</div>
   </div>
