@@ -5,15 +5,15 @@
     </div>
     <h4 id="introduction" class="introduction">Open GQL</h4>
     <p style="margin-top: 0; margin-bottom: min(2.5rem, 16px);" class="font-xl">Open Graph meets GraphQL</p>
-    <p id="tagline" class="font-xl">
+    <p id="tagline" class="font-xl" style="line-height: 1.8; margin-bottom: 40px">
       All you want to know about a link in a single Request and without a backend.
     </p>
-    <div class="useCases font-l">
-      <div>Create preview links like in whatsapp or facebook from your app.</div>
-      <div>Get relevant infos about a link.</div>
+    <div class="useCases font-l" >
+      <div style="line-height: 1.8">Create preview links like in whatsapp or facebook from your app.</div>
+      <div style="line-height: 1.8">Get relevant infos about a link.</div>
     </div>
     <div id="gettingStarted" class="gettingStarted">
-      <h6 class="font-l-alt">
+      <h6 class="font-xxl">
         Getting Started
       </h6>
       <preview-card style="width: 100%;">
@@ -22,7 +22,7 @@
         </template>
       </preview-card>
     </div>
-    <h6 class="font-l-alt">
+    <h6 class="font-xxl">
       Why GQL?
     </h6>
     <preview-card id="compTable" style="width: 100%; margin: 0;">
@@ -30,7 +30,7 @@
         <compare-table />
       </template>
     </preview-card>
-    <h6 class="font-l-alt">
+    <h6 id="pricing" class="font-xxl">
       Pricing
     </h6>
 
@@ -116,22 +116,6 @@ export default {
   margin-bottom: 2rem;
 }
 
-.font-l {
-  font-size: 1.3em;
-}
-
-.font-l-alt {
-  font-size: 32pt;
-}
-
-.font-xl {
-  font-size: 1.5em;
-}
-
-.font-xl-alt {
-  font-size: 36pt;
-}
-
 .useCases div:nth-child(2n) {
   margin-top: 16px;
   float: right;
@@ -154,10 +138,6 @@ export default {
   margin: 0;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-}
 
 .pricing-card {
   width: 100%;

@@ -63,7 +63,7 @@
   }
 
   .tbl-contrast {
-    background-color: var(--background-wave-color-half)
+    background-color: var(--primary-color-light)
   }
 
   .center {

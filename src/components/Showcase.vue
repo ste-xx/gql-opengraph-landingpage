@@ -19,7 +19,7 @@
   .input-field input[type=text]:not(.browser-default):focus:not([readonly]){
     border-bottom: 1px solid #e0e0e0;
     /* -webkit-box-shadow: 0 1px 0 0 #26a69a; */
-    box-shadow: 0 1px 0 0 var(--background-wave-color);
+    box-shadow: 0 1px 0 0 var(--primary-color);
   }
 
 </style>
