@@ -7,9 +7,9 @@
             <g-link to="/">OpenGQL</g-link>
           </strong>
         </div>
-        <a style="grid-area: e0; justify-self: center;" class="nav__link" href="#gettingStarted">Getting Started</a>
-        <a style="grid-area: e1; justify-self: center;" class="nav__link" href="#pricing">Pricing</a>
-        <a style="grid-area: e2; justify-self: center;" class="nav__link" href="#contact">Contact</a>
+        <div style="grid-area: e0;" class="nav__link"><a href="#gettingStarted">Getting Started</a></div>
+        <div style="grid-area: e1;" class="nav__link"><a href="#pricing">Pricing</a></div>
+        <div style="grid-area: e2;" class="nav__link"><a href="#contact">Contact</a></div>
       </div>
     </header>
     <div class="header-spacer">&nbsp;</div>
@@ -88,6 +88,9 @@ body {
 
 :root {
   --header-color: rgb(63, 63, 63);
+  --font-l: 1.3em;
+  --font-xl: 1.5em;
+  --font-xxl: 2.5em;
 
   --card-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   --card-title-color: rgb(63, 63, 63);
@@ -107,15 +110,15 @@ body {
 }
 
 .font-l {
-  font-size: 1.3em;
+  font-size: var(--font-l);
 }
 
 .font-xl {
-  font-size: 1.5em;
+  font-size: var(--font-xl);
 }
 
 .font-xxl {
-    font-size: 2em;
+  font-size: var(--font-xxl);
 }
 
 .layout {
@@ -155,11 +158,22 @@ body {
   display: grid;
   grid-template-areas: 'name . e0 e1 e2';
   grid-template-rows: min(2rem, 16px);
-  grid-template-columns: 1fr 16px 70px 70px 70px;
+  grid-template-columns: 1fr 16px auto auto auto;
   width: 100%;
   margin-left: 20px;
   margin-right: 20px;
   margin-top: -20px;
+}
+.nav__link {
+  justify-self: center;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (min-width: 768px) {
+  .nav__link {
+    width: 140px;
+  }
 }
 
 .background-container {

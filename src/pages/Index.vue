@@ -35,9 +35,9 @@
     </h6>
 
     <div style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap">
-      <pricing-card id="freePricing" class="pricing-card" plan-name="Free Plan" price="free">
+      <pricing-card id="freePricing" class="pricing-card" plan-name="Starter" price="Free">
         <template #description>
-          <div>following basic types:</div>
+          <div>following open graph types:</div>
           <ul>
             <li>og:title</li>
             <li>og:type</li>
@@ -49,7 +49,7 @@
         </template>
       </pricing-card>
 
-      <pricing-card id="premiumPlan" class="pricing-card" plan-name=" Premium Plan" price="4,99$ per month">
+      <pricing-card id="premiumPlan" class="pricing-card" plan-name="Premium" price="4,99$ per month">
         <template #description>
           <div>all in free plan + following additional types:</div>
           <ul>
@@ -61,13 +61,17 @@
             <li>og:video</li>
           </ul>
           <div>dedicated 5.000 request per day assured</div>
+        </template>
+        <template #select>
           <a class="waves-effect waves-light btn-large light-blue lighten-4 grey-text text-darken-2">Choose Premium</a>
         </template>
       </pricing-card>
 
-      <pricing-card id="enterprisePlan" class="pricing-card" plan-name="Enterprise Plan" price="Please contact">
+      <pricing-card id="enterprisePlan" class="pricing-card" plan-name="Enterprise" price="Please contact">
         <template #description>
           - special requirements or consulting fundamental more required requests. - contact
+        </template>
+        <template #select>
           <a class="waves-effect waves-light btn-large light-blue lighten-4 grey-text text-darken-2">Choose Enterprise</a>
         </template>
       </pricing-card>
