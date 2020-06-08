@@ -12,32 +12,14 @@
   </div>
 </template>
 
-<style>
-  /* label color */
-  .input-field label {
+<style scoped>
+  .input-field input[type=text]:not(.browser-default):focus:not([readonly])+label{
     color: #000;
   }
-  /* label focus color */
-  .input-field input[type=text]:focus + label {
-    color: #000;
+  .input-field input[type=text]:not(.browser-default):focus:not([readonly]){
+    border-bottom: 1px solid #e0e0e0;
+    /* -webkit-box-shadow: 0 1px 0 0 #26a69a; */
+    box-shadow: 0 1px 0 0 var(--background-wave-color);
   }
-  /* label underline focus color */
-  .input-field input[type=text]:focus {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000;
-  }
-  /* valid color */
-  .input-field input[type=text].valid {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000;
-  }
-  /* invalid color */
-  .input-field input[type=text].invalid {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000;
-  }
-  /* icon prefix focus color */
-  .input-field .prefix.active {
-    color: #000;
-  }
+
 </style>
