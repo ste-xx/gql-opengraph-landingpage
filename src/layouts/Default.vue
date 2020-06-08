@@ -7,8 +7,9 @@
                         <g-link to="/">OpenGQL</g-link>
                     </strong>
                 </div>
-                <a style="grid-area: e0; justify-self: end;" class="nav__link" href="#useCases">Getting Started</a>
+                <a style="grid-area: e0; justify-self: end;" class="nav__link" href="#gettingStarted">Getting Started</a>
                 <a style="grid-area: e1;  justify-self: end;" class="nav__link" href="#pricing">Pricing</a>
+                <a style="grid-area: e2;  justify-self: end;" class="nav__link" href="#contact">Contact</a>
             </div>
         </header>
         <div class="header-spacer">&nbsp;</div>
@@ -39,8 +40,11 @@
                 hoverMode="repulse"
                 :clickEffect="false"
                 clickMode="push"/>
-        <footer>
+        <footer style="margin-top: 16px">
             <g-link to="/impressum">Impressum information</g-link>
+            <div>
+                Icons made by <a href="https://fontawesome.com/">font awesome</a>
+            </div>
         </footer>
     </div>
 </template>
@@ -95,7 +99,8 @@
         --card-tag-font-size: 0.7em;
         --card-tag-font-weight: 700;
         /*efeeff*/
-        --background-wave-color: #a2d9ff;
+        --background-wave-color: rgb(162, 217, 255);
+        --background-wave-color-half: rgba(162, 217, 255, 0.5);
         --background-wave-opacity: 0.5;
         --background-wave-start-wave: 20vh
     }
@@ -135,12 +140,13 @@
 
     .nav {
         display: grid;
-        grid-template-areas: 'name . e0 e1';
+        grid-template-areas: 'name . e0 e1 e2';
         grid-template-rows: min(2rem, 16px);
         grid-template-columns: auto 16px auto auto;
         width: 100%;
         margin-left: 20px;
         margin-right: 20px;
+        margin-top: -20px;
     }
 
     .nav__link {
