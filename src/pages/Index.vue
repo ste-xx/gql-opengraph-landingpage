@@ -5,12 +5,12 @@
     </div>
     <h4 id="introduction" class="introduction">Open GQL</h4>
     <p style="margin-top: 0; margin-bottom: min(2.5rem, 16px);" class="font-xl">Open Graph meets GraphQL</p>
-    <p id="tagline" class="font-xl" style="line-height: 1.8; margin-bottom: 40px">
+    <p id="tagline" class="font-xl" style="line-height: 1.8; margin-bottom: 40px;">
       All you want to know about a link in a single Request and without a backend.
     </p>
-    <div class="useCases font-l" >
-      <div style="line-height: 1.8">Create preview links like in whatsapp or facebook from your app.</div>
-      <div style="line-height: 1.8">Get relevant infos about a link.</div>
+    <div class="useCases font-l">
+      <div style="line-height: 1.8;">Create preview links like in whatsapp or facebook from your app.</div>
+      <div style="line-height: 1.8;">Get relevant infos about a link.</div>
     </div>
     <div id="gettingStarted" class="gettingStarted">
       <h6 class="font-xxl">
@@ -34,45 +34,28 @@
       Pricing
     </h6>
 
-    <div style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap">
+    <div style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;">
       <pricing-card id="freePricing" class="pricing-card" plan-name="Starter" price="Free">
         <template #description>
-          <div>following open graph types:</div>
-          <ul>
-            <li>og:title</li>
-            <li>og:type</li>
-            <li>og:image</li>
-            <li>og:url</li>
-          </ul>
-          <div>usable without an api key</div>
-          <div>global rate limited</div>
+          <free-plan-description />
         </template>
       </pricing-card>
 
       <pricing-card id="premiumPlan" class="pricing-card" plan-name="Premium" price="4,99$ per month">
         <template #description>
-          <div>all in free plan + following additional types:</div>
-          <ul>
-            <li>og:audio</li>
-            <li>og:description</li>
-            <li>og:determiner</li>
-            <li>og:locale</li>
-            <li>og:site_name</li>
-            <li>og:video</li>
-          </ul>
-          <div>dedicated 5.000 request per day assured</div>
+          <premium-plan-description />
         </template>
         <template #select>
           <a class="waves-effect waves-light btn-large light-blue lighten-4 grey-text text-darken-2">Choose Premium</a>
         </template>
       </pricing-card>
 
-      <pricing-card id="enterprisePlan" class="pricing-card" plan-name="Enterprise" price="Please contact">
+      <pricing-card id="enterprisePlan" class="pricing-card" plan-name="Enterprise" price="">
         <template #description>
-          - special requirements or consulting fundamental more required requests. - contact
+          <enterprise-plan-description />
         </template>
         <template #select>
-          <a class="waves-effect waves-light btn-large light-blue lighten-4 grey-text text-darken-2">Choose Enterprise</a>
+          <a class="waves-effect waves-light btn-large light-blue lighten-4 grey-text text-darken-2">Contact</a>
         </template>
       </pricing-card>
     </div>
@@ -84,13 +67,19 @@ import PreviewCard from '~/components/PreviewCard.vue';
 import PricingCard from '~/components/PricingCard.vue';
 import Showcase from '~/components/Showcase.vue';
 import CompareTable from '~/components/CompareTable.vue';
+import FreePlanDescription from '~/components/FreePlanDescription.vue';
+import PremiumPlanDescription from '~/components/PremiumPlanDescription.vue';
+import EnterprisePlanDescription from '~/components/EnterprisePlanDescription.vue';
 // 40 * 13 / 3
 export default {
   components: {
     PreviewCard,
     PricingCard,
     Showcase,
-    CompareTable
+    CompareTable,
+    FreePlanDescription,
+    PremiumPlanDescription,
+    EnterprisePlanDescription
   },
   metaInfo: {
     title: 'Open Graph meets GraphQL'
@@ -141,7 +130,6 @@ export default {
 #compTable .preview-card--description {
   margin: 0;
 }
-
 
 .pricing-card {
   width: 100%;
