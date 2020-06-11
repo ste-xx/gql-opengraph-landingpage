@@ -6,16 +6,18 @@
       <button></button>
     </div>
 
-    <a style="font-size: 1.2rem;" href="https://opengraph.stefanbreitenstein.workers.dev/___graphql" target="_blank">Show in GraphiQL ></a>
+    <a style="font-size: 1.2rem;" href="https://opengql.stefanbreitenstein.workers.dev/___graphql" target="_blank">Show in GraphiQL ></a>
     - result pretty format - show query in tab
   </div>
 </template>
 
 <script>
-const url = 'https://opengql.stefanbreitenstein.workers.dev/';
+// import gql from 'graphql-tag';
+
+const gqlEndpoint = 'https://opengql.stefanbreitenstein.workers.dev/';
 
 export const debounce = ({ fn, timeout }) => {
-  let isCalled = false
+  let isCalled = false;
   let nextFn;
   const dbFn = async (...args) => {
     if (isCalled) {
@@ -28,8 +30,8 @@ export const debounce = ({ fn, timeout }) => {
       isCalled = false;
       const _nextFn = nextFn;
       nextFn = null;
-      if(_nextFn){
-          _nextFn()
+      if (_nextFn) {
+        _nextFn();
       }
     }, timeout);
   };
@@ -49,13 +51,27 @@ export default {
   },
   watch: {
     url(newValue, oldValue) {
-      console.warn('w');
       this.debounceRequest(newValue);
     }
   },
   methods: {
-    request(url) {
+    async request(url) {
       console.warn(url);
+      const result = await fetch(gqlEndpoint, {
+        method: 'POST',
+        body: JSON.stringify({
+          query: `{
+            opengraph(url:$url){
+              opengraph{
+                og_type
+              }
+            }`,
+          variables: {
+            url: 'https://www.spiegel.de/wissenschaft/mensch/corona-pandemie-wuergt-kohlestrom-ab-a-06e92d67-a060-47e3-8599-8a44c6f81b33'
+          }
+        })
+      }).then((r) => r.json());
+      console.warn(result);
     }
   }
 };
