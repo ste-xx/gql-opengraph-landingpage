@@ -88,6 +88,7 @@ body {
 
 :root {
   --header-color: rgb(63, 63, 63);
+  --font-m: 1.1em;
   --font-l: 1.3em;
   --font-xl: 1.5em;
   --font-xxl: 2.5em;

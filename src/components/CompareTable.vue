@@ -1,8 +1,8 @@
 <template>
   <div class="compareContainer">
-    <div style="grid-area: argHeader"></div>
-    <div style="grid-area: restHeader"><div class="center">REST</div></div>
-    <div style="grid-area: gqlHeader"><div class="center">GQL</div></div>
+    <div style="font-size: var(--font-l); grid-area: argHeader"></div>
+    <div style="font-size: var(--font-l); grid-area: restHeader"><div class="center">REST</div></div>
+    <div style="font-size: var(--font-l); grid-area: gqlHeader"><div class="center">GQL</div></div>
 
     <div style="grid-area: arg0">
       Integrate seamless in your existing api landscape
@@ -53,6 +53,8 @@
   .compareContainer {
     width: 100%;
     display: grid;
+    line-height: 1.8;
+    font-size: var(--font-m);
     grid-template-areas:
      'fillerHeader argHeader restHeader gqlHeader'
      'filler0 arg0 rest0 gql0'

@@ -13,7 +13,7 @@
       <div style="line-height: 1.8;">Get relevant infos about a link.</div>
     </div>
     <div id="gettingStarted" class="gettingStarted">
-      <h6 class="font-xxl">
+      <h6 class="font-xxl" style="margin-bottom: 30px">
         Getting Started
       </h6>
       <preview-card style="width: 100%;">
@@ -22,28 +22,28 @@
         </template>
       </preview-card>
     </div>
-    <h6 class="font-xxl">
+    <h6 class="font-xxl" style="margin-bottom: 30px;">
       Why GQL?
     </h6>
-    <preview-card id="compTable" style="width: 100%; margin: 0;">
+    <preview-card id="compTable" style="width: 100%; margin-bottom: 60px;">
       <template #description>
-        <compare-table />
+        <compare-table style="margin-bottom: 15px"/>
       </template>
     </preview-card>
-    <h6 id="pricing" class="font-xxl">
+    <h6 id="pricing" class="font-xxl" style="margin-bottom: 30px;">
       Pricing
     </h6>
 
-    <div style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;">
+    <div style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap; margin-bottom: 60px;">
       <pricing-card id="freePricing" class="pricing-card" plan-name="Starter" price="Free">
         <template #description>
-          <free-plan-description />
+          <free-plan-description style="height: 330px"/>
         </template>
       </pricing-card>
 
       <pricing-card id="premiumPlan" class="pricing-card" plan-name="Premium" price="4,99$ per month">
         <template #description>
-          <premium-plan-description />
+          <premium-plan-description style="height: 330px"/>
         </template>
         <template #select>
           <a class="waves-effect waves-light btn-large light-blue lighten-4 grey-text text-darken-2">Choose Premium</a>
@@ -52,7 +52,9 @@
 
       <pricing-card id="enterprisePlan" class="pricing-card" plan-name="Enterprise" price="">
         <template #description>
-          <enterprise-plan-description />
+          <div style="height: 330px">
+            <enterprise-plan-description/>
+          </div>
         </template>
         <template #select>
           <a class="waves-effect waves-light btn-large light-blue lighten-4 grey-text text-darken-2">Contact</a>
@@ -105,8 +107,7 @@ export default {
 }
 
 .gettingStarted {
-  margin-top: 32px;
-  margin-bottom: 2rem;
+  margin-bottom: 60px;
 }
 
 .useCases div:nth-child(2n) {
@@ -125,6 +126,7 @@ export default {
   display: block;
   height: 0;
   clear: both;
+  margin-bottom: 32px;
 }
 
 #compTable .preview-card--description {

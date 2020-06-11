@@ -1,5 +1,6 @@
 <template>
   <div class="planContainer">
+    <div>&nbsp;</div>
     <div>following open graph types</div>
     <ul style="justify-self: center; line-height: 1.8">
       <li>og:title</li>
@@ -17,5 +18,6 @@
     display: grid;
     justify-items: center;
     line-height: 2.5;
+    font-size: var(--font-m)
   }
 </style>
