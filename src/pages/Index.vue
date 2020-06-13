@@ -41,7 +41,7 @@
         </template>
       </pricing-card>
 
-      <pricing-card id="premiumPlan" class="pricing-card" plan-name="Premium" price="4,99$ per month">
+      <pricing-card id="premiumPlan" class="pricing-card" plan-name="Premium" price="7,99$ per month">
         <template #description>
           <premium-plan-description style="height: 330px;" />
         </template>

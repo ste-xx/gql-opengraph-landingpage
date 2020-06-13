@@ -9,7 +9,7 @@
         <li>og:locale</li>
         <li>og:site_name</li>
       </ul>
-      <div>dedicated 5.000 request/day assured</div>
+      <div>dedicated 3.000 request/day assured</div>
   </div>
 </template>
 
