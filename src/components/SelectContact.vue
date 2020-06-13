@@ -44,7 +44,6 @@ export default {
         .join('&');
     },
     handleSubmit() {
-      console.warn('test');
       fetch('/', {
         method: 'post',
         headers: {

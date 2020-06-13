@@ -44,9 +44,24 @@ export default {
     M.Modal.init(document.querySelectorAll('#modal-premium'));
   },
   methods: {
-    submit() {
-        this.$refs.form.submit();
-    }
+      encode(data) {
+          return Object.keys(data)
+              .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+              .join('&');
+      },
+      handleSubmit() {
+          fetch('/', {
+              method: 'post',
+              headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+              },
+              body: this.encode({
+                  'form-name': 'selectPremium',
+                  premiumEmail: this.mail,
+                  premiumConfirm: this.checked
+              })
+          });
+      }
   }
 };
 </script>

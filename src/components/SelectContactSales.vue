@@ -6,7 +6,7 @@
         <h4>Contact Sales</h4>
 
         <div class="input-field">
-          <form  ref="form" name="contactSales" method="POST" data-netlify="true">
+          <form ref="form" name="contactSales" method="POST" data-netlify="true" @submit.prevent="handleSubmit">
             <label for="contactSalesEmail">Email (required)</label>
             <input id="contactSalesEmail" type="email" name="email" style="margin-bottom: 16px;" v-model="mail" />
 
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="modal-footer" style="display: flex; justify-content: space-between;">
-        <a href="#!" class="modal-close waves-effect waves-primary btn-flat" :class="{ disabled: !mail || !name }" @click="submit">Get in touch</a>
+        <a href="#!" class="modal-close waves-effect waves-primary btn-flat" :class="{ disabled: !mail || !name }" @click="handleSubmit">Get in touch</a>
         <a href="#!" class="modal-close waves-effect waves-primary btn-flat">Cancel</a>
       </div>
     </div>
@@ -39,8 +39,24 @@ export default {
     M.Modal.init(document.querySelectorAll('#modal-contact-sales'));
   },
   methods: {
-    submit() {
-      this.$refs.form.submit();
+    encode(data) {
+      return Object.keys(data)
+        .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+        .join('&');
+    },
+    handleSubmit() {
+      fetch('/', {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: this.encode({
+          'form-name': 'contactSales',
+          contactEmail: this.mail,
+          contactName: this.name,
+          contactHelp: this.help
+        })
+      });
     }
   }
 };
