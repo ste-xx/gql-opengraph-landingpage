@@ -7,14 +7,14 @@
 
         <div class="input-field">
           <form  ref="form" name="contactSales" method="POST" data-netlify="true">
-            <label for="contactEmail">Email (required)</label>
-            <input id="contactEmail" type="email" name="email" style="margin-bottom: 16px;" v-model="mail" />
+            <label for="contactSalesEmail">Email (required)</label>
+            <input id="contactSalesEmail" type="email" name="email" style="margin-bottom: 16px;" v-model="mail" />
 
-            <label for="contactName">Name (required)</label>
-            <input id="contactName" type="text" name="name" style="margin-bottom: 16px;" v-model="name" />
+            <label for="contactSalesName">Name (required)</label>
+            <input id="contactSalesName" type="text" name="name" style="margin-bottom: 16px;" v-model="name" />
 
-            <label for="contactHelp">How can we help?</label>
-            <textarea id="contactHelp" class="materialize-textarea" v-model="help"></textarea>
+            <label for="contactSalesHelp">How can we help?</label>
+            <textarea id="contactSalesHelp" class="materialize-textarea" v-model="help"></textarea>
           </form>
         </div>
       </div>
