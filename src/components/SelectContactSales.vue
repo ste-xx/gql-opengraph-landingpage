@@ -13,8 +13,8 @@
             <label for="contactSalesName">Name (required)</label>
             <input id="contactSalesName" type="text" name="name" style="margin-bottom: 16px;" v-model="name" />
 
-            <label for="contactSalesHelp">How can we help?</label>
-            <textarea id="contactSalesHelp" class="materialize-textarea" v-model="help"></textarea>
+            <label for="contactSalesHelp">How can we help</label>
+            <textarea id="contactSalesHelp" class="materialize-textarea" v-model="help" name="help"></textarea>
           </form>
         </div>
       </div>
