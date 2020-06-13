@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="modal-footer" style="display: flex; justify-content: space-between;">
-        <a href="#!" class="modal-close waves-effect waves-primary btn-flat" :class="{ disabled: !checked || !mail }" @click="submit">Submit</a>
+        <a href="#!" class="modal-close waves-effect waves-primary btn-flat" :class="{ disabled: !checked || !mail }" @click="handleSubmit">Submit</a>
         <a href="#!" class="modal-close waves-effect waves-primary btn-flat">Cancel</a>
       </div>
     </div>
