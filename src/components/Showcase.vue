@@ -15,14 +15,30 @@
     <div v-if="loading">
       loading...
     </div>
-    <div v-if="result" class="resultGrid">
-      <div style="grid-area: title; font-size: var(--font-l);">{{ result.og_title }}</div>
-      <img v-if="result.og_image" :src="result.og_image" style="grid-area: image; object-fit: cover; width: 100%;" />
-      <div style="grid-area: description;">{{ result.og_description }}</div>
-      <div v-if="result.og_url" style="grid-area: url;">
-        <a :href="result.og_url" target="_blank">{{ result.og_url }}</a>
+    <div v-if="error">
+      {{ error }}
+    </div>
+
+    <ul ref="tabs" class="tabs" v-show="result">
+      <li class="tab col s3"><a class="active" href="#result-1">Preview</a></li>
+      <li class="tab col s3"><a href="#result-2">Raw</a></li>
+    </ul>
+    <div id="result-1">
+      <div v-if="result" class="resultGrid" style="margin-top: 16px;">
+        <div style="grid-area: title; font-size: var(--font-l);">{{ result.og_title }}</div>
+        <img v-if="result.og_image" :src="result.og_image" style="grid-area: image; object-fit: cover; width: 100%;" />
+        <div style="grid-area: description;">{{ result.og_description }}</div>
+        <div v-if="result.og_url" style="grid-area: url;">
+          <a :href="result.og_url" target="_blank">{{ result.og_url }}</a>
+        </div>
       </div>
     </div>
+    <div id="result-2">
+      <pre style="width: 50px;">
+        {{ pretty }}
+      </pre>
+    </div>
+
     <div style="margin-bottom: 15px; margin-top: 15px;">
       <a style="font-size: var(--font-l);" href="https://opengql.stefanbreitenstein.workers.dev/___graphql" target="_blank">Show in GraphiQL ></a>
     </div>
@@ -30,8 +46,6 @@
 </template>
 
 <script>
-// import gql from 'graphql-tag';
-
 const gqlEndpoint = 'https://opengql.stefanbreitenstein.workers.dev/';
 
 export const debounce = ({ fn, timeout }) => {
@@ -63,11 +77,16 @@ export default {
       url: '',
       debounceRequest: () => {},
       result: null,
-      loading: false
+      loading: false,
+      error: null,
+      pretty: ''
     };
   },
   created() {
     this.debounceRequest = debounce({ fn: this.request, timeout: 3000 });
+  },
+  mounted() {
+    M.Tabs.init(this.$refs.tabs, {});
   },
   watch: {
     url(newValue, oldValue) {
@@ -80,7 +99,10 @@ export default {
         return;
       }
       this.result = null;
-      console.log(url)
+      this.error = null;
+      this.pretty = '';
+
+      console.log(url);
       const normalizedUrl = url.startsWith('https://') ? url : `https://${url}`;
       console.log(normalizedUrl);
       this.loading = true;
@@ -110,8 +132,13 @@ export default {
         })
       })
         .then((r) => r.json())
+        .catch((e) => {
+          this.error = e;
+          return Promise.reject(e);
+        })
         .finally(() => (this.loading = false));
       this.result = result?.data?.opengraph?.opengraph;
+      this.pretty = JSON.stringify(result, null, 2);
       console.log(result);
     }
   }
@@ -159,5 +186,21 @@ export default {
   border-bottom: 1px solid #e0e0e0;
   /* -webkit-box-shadow: 0 1px 0 0 #26a69a; */
   box-shadow: 0 1px 0 0 var(--primary-color);
+}
+
+.tabs .tab a {
+  color: var(--primary-color);
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+  background-color: var(--primary-color-light);
+  color: #817e7e;
+}
+</style>
+
+<style>
+.tabs .indicator {
+  background-color: #817e7e;
 }
 </style>
