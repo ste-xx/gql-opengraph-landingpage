@@ -1,12 +1,12 @@
 <template>
   <div>
     <a class="waves-effect waves-light btn-large light-blue lighten-4 grey-text text-darken-2 modal-trigger" href="#modal-contact">Contact</a>
-    <div id="modal-contact" class="modal">
+    <div id="modal-contact-sales" class="modal">
       <div class="modal-content">
-        <h4>Contact</h4>
+        <h4>Contact Sales</h4>
 
         <div class="input-field">
-          <form  ref="form" name="contact" method="POST" data-netlify="true">
+          <form  ref="form" name="contactSales" method="POST" data-netlify="true">
             <label for="contactEmail">Email</label>
             <input id="contactEmail" type="email" name="email" style="margin-bottom: 16px;" v-model="mail" />
 
@@ -14,12 +14,12 @@
             <input id="contactName" type="text" name="name" style="margin-bottom: 16px;" v-model="name" />
 
             <label for="contactHelp">How can we help?</label>
-            <textarea id="contactHelp" class="materialize-textarea" v-model="help" name="help"></textarea>
+            <textarea id="contactHelp" class="materialize-textarea" v-model="help"></textarea>
           </form>
         </div>
       </div>
       <div class="modal-footer" style="display: flex;">
-        <a href="#!" class="modal-close waves-effect waves-primary btn-flat">Submit</a>
+        <a href="#!" class="modal-close waves-effect waves-primary btn-flat">Get in touch</a>
       </div>
     </div>
   </div>
@@ -35,7 +35,7 @@ export default {
     };
   },
   mounted() {
-    M.Modal.init(document.querySelectorAll('#modal-contact'));
+    M.Modal.init(document.querySelectorAll('#modal-contact-sales'));
   },
   methods: {
     submit() {

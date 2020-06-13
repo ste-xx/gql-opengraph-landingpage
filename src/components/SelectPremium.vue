@@ -13,19 +13,19 @@
         <h4 style="margin-top: 30px; margin-bottom: 15px; font-size: var(--font-xl);">Contact permission</h4>
 
         <div class="input-field">
-          <form>
+          <form ref="form" name="selectPremium" method="POST" data-netlify="true">
             <label for="premiumEmail">Email</label>
             <input id="premiumEmail" type="email" name="email" style="margin-bottom: 16px;" v-model="mail" />
 
             <label>
-              <input id="premiumConfirm" type="checkbox" v-model="checked" />
+              <input id="premiumConfirm" type="checkbox" name="confirm" v-model="checked" />
               <span>I agree to receive product information and offers from openGQL</span>
             </label>
           </form>
         </div>
       </div>
       <div class="modal-footer" style="display: flex; justify-content: space-between;">
-        <a href="#!" class="modal-close waves-effect waves-primary btn-flat" :class="{ disabled: !checked || !mail }">Submit</a>
+        <a href="#!" class="modal-close waves-effect waves-primary btn-flat" :class="{ disabled: !checked || !mail }" @click="submit">Submit</a>
         <a href="#!" class="modal-close waves-effect waves-primary btn-flat">Cancel</a>
       </div>
     </div>
@@ -42,6 +42,11 @@ export default {
   },
   mounted() {
     M.Modal.init(document.querySelectorAll('#modal-premium'));
+  },
+  methods: {
+    submit() {
+        this.$refs.form.submit();
+    }
   }
 };
 </script>
