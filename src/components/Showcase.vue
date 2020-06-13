@@ -1,13 +1,27 @@
 <template>
   <div>
     <div class="input-field">
-      <input placeholder="Insert a URL and see the preview" id="previewUrl" type="text" v-model="url" />
+      <input placeholder="Insert a URL to show" id="previewUrl" type="text" v-model="url" />
       <label for="previewUrl">Url</label>
-      <button></button>
+      <a @click="debounceRequest(url)" class="waves-effect waves-light btn light-blue lighten-4 grey-text text-darken-2" style="display: flex; align-items: center; margin-left: 8px; margin-top: 4px; min-width: 100px;">
+        Fetch
+        <font-awesome :icon="['fas', 'play']" style="margin-left: 8px; margin-right: 8px;" />
+      </a>
     </div>
-
-    <a style="font-size: 1.2rem;" href="https://opengql.stefanbreitenstein.workers.dev/___graphql" target="_blank">Show in GraphiQL ></a>
-    - result pretty format - show query in tab
+    <div v-if="loading">
+      loading...
+    </div>
+    <div v-if="result" class="resultGrid">
+      <div style="grid-area: title; font-size: var(--font-l)">{{ result.og_title }}</div>
+      <img v-if="result.og_image" :src="result.og_image" style="grid-area: image; object-fit: cover; width: 100%;" />
+      <div style="grid-area: description;">{{ result.og_description }}</div>
+      <div v-if="result.og_url" style="grid-area: url;">
+        <a :href="result.og_url" target="_blank">{{ result.og_url }}</a>
+      </div>
+    </div>
+    <div style="margin-bottom: 15px; margin-top: 15px;">
+      <a style="font-size: var(--font-l);" href="https://opengql.stefanbreitenstein.workers.dev/___graphql" target="_blank">Show in GraphiQL ></a>
+    </div>
   </div>
 </template>
 
@@ -43,7 +57,9 @@ export default {
   data() {
     return {
       url: '',
-      debounceRequest: () => {}
+      debounceRequest: () => {},
+      result: null,
+      loading: false
     };
   },
   created() {
@@ -57,20 +73,35 @@ export default {
   methods: {
     async request(url) {
       console.warn(url);
+      this.loading = true;
       const result = await fetch(gqlEndpoint, {
-        method: 'POST',
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify({
-          query: `{
-            opengraph(url:$url){
+          query: `
+          query opengraph($url: String!)
+          {
+            opengraph(url: $url){
               opengraph{
+                og_title
+                og_image
+                og_description
+                og_url
                 og_type
               }
-            }`,
+            }
+          }
+          `,
           variables: {
-            url: 'https://www.spiegel.de/wissenschaft/mensch/corona-pandemie-wuergt-kohlestrom-ab-a-06e92d67-a060-47e3-8599-8a44c6f81b33'
+            url
           }
         })
-      }).then((r) => r.json());
+      })
+        .then((r) => r.json())
+        .finally(() => (this.loading = false));
+      this.result = result?.data?.opengraph?.opengraph;
       console.warn(result);
     }
   }
@@ -78,6 +109,39 @@ export default {
 </script>
 
 <style scoped>
+.resultGrid {
+  display: grid;
+  grid-template-areas:
+    'title'
+    'image'
+    'description'
+    'url';
+  grid-template-rows: auto auto auto auto;
+  /*grid-template-columns: max(125px, 25%) 16px auto;*/
+  grid-template-columns: auto;
+  grid-row-gap: 16px;
+
+  padding-left: 16px;
+  border-left: 2px solid var(--primary-color-light);
+}
+
+@media only screen and (min-width: 768px) {
+  .resultGrid {
+    grid-template-areas:
+      'title title title'
+      '. . .'
+      'image . description'
+      '. . .' 'url url url';
+    grid-template-rows: auto 8px auto 8px auto;
+    grid-template-columns: max(125px, 25%) 16px auto;
+    grid-row-gap: initial;
+  }
+}
+
+.input-field {
+  display: flex;
+}
+
 .input-field input[type='text']:not(.browser-default):focus:not([readonly]) + label {
   color: #000;
 }

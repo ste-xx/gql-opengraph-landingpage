@@ -4,7 +4,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import {config, library} from '@fortawesome/fontawesome-svg-core'
-import {faExternalLinkAlt, faRss, faCheck, faTimes} from '@fortawesome/free-solid-svg-icons'
+import {faExternalLinkAlt, faRss, faCheck, faTimes, faPlay} from '@fortawesome/free-solid-svg-icons'
 import {
   faGithub,
   faWikipediaW,
@@ -22,6 +22,7 @@ import 'typeface-montserrat';
   faRss,
   faCheck,
   faTimes,
+  faPlay,
 
   faGithub,
   faLinkedin,
