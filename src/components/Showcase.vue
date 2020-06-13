@@ -3,7 +3,11 @@
     <div class="input-field">
       <input placeholder="Insert a URL to show" id="previewUrl" type="text" v-model="url" />
       <label for="previewUrl">Url</label>
-      <a @click="debounceRequest(url)" class="waves-effect waves-light btn light-blue lighten-4 grey-text text-darken-2" style="display: flex; align-items: center; margin-left: 8px; margin-top: 4px; min-width: 100px;">
+      <a
+        @click="debounceRequest(url)"
+        class="waves-effect waves-light btn light-blue lighten-4 grey-text text-darken-2"
+        style="display: flex; align-items: center; margin-left: 8px; margin-top: 4px; min-width: 100px;"
+      >
         Fetch
         <font-awesome :icon="['fas', 'play']" style="margin-left: 8px; margin-right: 8px;" />
       </a>
@@ -12,7 +16,7 @@
       loading...
     </div>
     <div v-if="result" class="resultGrid">
-      <div style="grid-area: title; font-size: var(--font-l)">{{ result.og_title }}</div>
+      <div style="grid-area: title; font-size: var(--font-l);">{{ result.og_title }}</div>
       <img v-if="result.og_image" :src="result.og_image" style="grid-area: image; object-fit: cover; width: 100%;" />
       <div style="grid-area: description;">{{ result.og_description }}</div>
       <div v-if="result.og_url" style="grid-area: url;">
@@ -72,7 +76,13 @@ export default {
   },
   methods: {
     async request(url) {
-      console.warn(url);
+      if (url === '') {
+        return;
+      }
+      this.result = null;
+      console.log(url)
+      const normalizedUrl = url.startsWith('https://') ? url : `https://${url}`;
+      console.log(normalizedUrl);
       this.loading = true;
       const result = await fetch(gqlEndpoint, {
         method: 'post',
@@ -95,14 +105,14 @@ export default {
           }
           `,
           variables: {
-            url
+            url: normalizedUrl
           }
         })
       })
         .then((r) => r.json())
         .finally(() => (this.loading = false));
       this.result = result?.data?.opengraph?.opengraph;
-      console.warn(result);
+      console.log(result);
     }
   }
 };

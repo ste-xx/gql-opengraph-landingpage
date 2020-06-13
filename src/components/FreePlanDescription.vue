@@ -4,6 +4,7 @@
     <div>following open graph types</div>
     <ul style="justify-self: center; line-height: 1.8">
       <li>og:title</li>
+      <li>og:description</li>
       <li>og:type</li>
       <li>og:image</li>
       <li>og:url</li>
