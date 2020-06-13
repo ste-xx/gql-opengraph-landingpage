@@ -1,16 +1,15 @@
 <template>
   <div>
-    <a class="waves-effect waves-light btn-large light-blue lighten-4 grey-text text-darken-2 modal-trigger" href="#modal-contact">Contact</a>
     <div id="modal-contact" class="modal">
       <div class="modal-content">
         <h4>Contact</h4>
 
         <div class="input-field">
           <form  ref="form" name="contact" method="POST" data-netlify="true">
-            <label for="contactEmail">Email</label>
+            <label for="contactEmail">Email (required)</label>
             <input id="contactEmail" type="email" name="email" style="margin-bottom: 16px;" v-model="mail" />
 
-            <label for="contactName">Name</label>
+            <label for="contactName">Name (required)</label>
             <input id="contactName" type="text" name="name" style="margin-bottom: 16px;" v-model="name" />
 
             <label for="contactHelp">How can we help?</label>
@@ -18,8 +17,9 @@
           </form>
         </div>
       </div>
-      <div class="modal-footer" style="display: flex;">
-        <a href="#!" class="modal-close waves-effect waves-primary btn-flat">Submit</a>
+      <div class="modal-footer" style="display: flex; justify-content: space-between;">
+        <a href="#!" class="modal-close waves-effect waves-primary btn-flat" :class="{ disabled: !mail || !name }" @click="submit">Submit</a>
+        <a href="#!" class="modal-close waves-effect waves-primary btn-flat">Cancel</a>
       </div>
     </div>
   </div>

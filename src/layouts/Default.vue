@@ -9,7 +9,7 @@
         </div>
         <div style="grid-area: e0;" class="nav__link"><a href="#gettingStarted">Getting Started</a></div>
         <div style="grid-area: e1;" class="nav__link"><a href="#pricing">Pricing</a></div>
-        <div style="grid-area: e2;" class="nav__link"><a class="modal-trigger" href="#modal-contact-sales">Contact</a></div>
+        <div style="grid-area: e2;" class="nav__link"><a class="modal-trigger" href="#modal-contact">Contact</a></div>
       </div>
     </header>
     <div class="header-spacer">&nbsp;</div>

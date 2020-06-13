@@ -57,9 +57,10 @@
           </div>
         </template>
         <template #select>
-          <select-contact />
+          <select-contact-sales />
         </template>
       </pricing-card>
+      <select-contact />
     </div>
   </Layout>
 </template>
@@ -73,6 +74,8 @@ import FreePlanDescription from '~/components/FreePlanDescription.vue';
 import PremiumPlanDescription from '~/components/PremiumPlanDescription.vue';
 import SelectPremium from '~/components/SelectPremium.vue';
 import EnterprisePlanDescription from '~/components/EnterprisePlanDescription.vue';
+import SelectContactSales from '~/components/SelectContactSales.vue';
+
 import SelectContact from '~/components/SelectContact.vue';
 
 export default {
@@ -85,7 +88,8 @@ export default {
     PremiumPlanDescription,
     SelectPremium,
     EnterprisePlanDescription,
-    SelectContact
+    SelectContact,
+    SelectContactSales
   },
   metaInfo: {
     title: 'Open Graph meets GraphQL'
