@@ -10,7 +10,7 @@
           <div>If are interested, you can stay informed and get notified if something new happens:</div>
         </div>
 
-        <h4 style="margin-top: 30px; font-size: var(--font-xl);">Contact permission</h4>
+        <h4 style="margin-top: 30px; margin-bottom: 15px; font-size: var(--font-xl);">Contact permission</h4>
 
         <div class="input-field">
           <form>
@@ -25,8 +25,8 @@
         </div>
       </div>
       <div class="modal-footer" style="display: flex; justify-content: space-between;">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat" :class="{ disabled: !checked || !mail }">Submit</a>
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+        <a href="#!" class="modal-close waves-effect waves-primary btn-flat" :class="{ disabled: !checked || !mail }">Submit</a>
+        <a href="#!" class="modal-close waves-effect waves-primary btn-flat">Cancel</a>
       </div>
     </div>
   </div>
@@ -47,10 +47,12 @@ export default {
 </script>
 
 <style scoped>
-#modal-premium .input-field input[type='email']:not(.browser-default):focus:not([readonly]) + label {
-  color: #000;
+.input-field input[type='checkbox']:not(.browser-default):focus:not([readonly]) + label,
+.input-field input[type='email']:not(.browser-default):focus:not([readonly]) + label {
+  color: #9e9e9e;
 }
-#modal-premium .input-field input[type='email']:not(.browser-default):focus:not([readonly]) {
+.input-field input[type='checkbox']:not(.browser-default):focus:not([readonly]),
+.input-field input[type='email']:not(.browser-default):focus:not([readonly]) {
   border-bottom: 1px solid #e0e0e0;
   /* -webkit-box-shadow: 0 1px 0 0 #26a69a; */
   box-shadow: 0 1px 0 0 var(--primary-color);

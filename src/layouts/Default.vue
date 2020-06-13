@@ -110,6 +110,7 @@ body {
   --background-wave-start-wave: 25vh;
 }
 
+
 .font-l {
   font-size: var(--font-l);
 }
@@ -175,6 +176,13 @@ body {
   .nav__link {
     width: 140px;
   }
+}
+
+/*button waves animation*/
+.waves-effect.waves-primary .waves-ripple {
+  /* The alpha value allows the text and background color
+  of the button to still show through. */
+  background-color: var(--primary-color-light);
 }
 
 .background-container {
