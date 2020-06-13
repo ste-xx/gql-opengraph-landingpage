@@ -1,0 +1,58 @@
+<template>
+  <div>
+    <a class="waves-effect waves-light btn-large light-blue lighten-4 grey-text text-darken-2 modal-trigger" href="#modal-premium">Choose Premium</a>
+    <div id="modal-premium" class="modal">
+      <div class="modal-content">
+        <h4>Sorry, we are not ready yet :(</h4>
+        <div style="line-height: 1.8;">
+          <div>We are currently working on the premium plan.</div>
+          <div style="width: 100%;">&nbsp;</div>
+          <div>If are interested, you can stay informed and get notified if something new happens:</div>
+        </div>
+
+        <h4 style="margin-top: 30px; font-size: var(--font-xl);">Contact permission</h4>
+
+        <div class="input-field">
+          <form>
+            <label for="premiumEmail">Email</label>
+            <input id="premiumEmail" type="email" name="email" style="margin-bottom: 16px;" v-model="mail" />
+
+            <label>
+              <input id="premiumConfirm" type="checkbox" v-model="checked" />
+              <span>I agree to receive product information and offers from openGQL</span>
+            </label>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer" style="display: flex; justify-content: space-between;">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat" :class="{ disabled: !checked || !mail }">Submit</a>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      checked: false,
+      mail: ''
+    };
+  },
+  mounted() {
+    M.Modal.init(document.querySelectorAll('#modal-premium'));
+  }
+};
+</script>
+
+<style scoped>
+#modal-premium .input-field input[type='email']:not(.browser-default):focus:not([readonly]) + label {
+  color: #000;
+}
+#modal-premium .input-field input[type='email']:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #e0e0e0;
+  /* -webkit-box-shadow: 0 1px 0 0 #26a69a; */
+  box-shadow: 0 1px 0 0 var(--primary-color);
+}
+</style>

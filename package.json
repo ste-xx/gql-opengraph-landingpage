@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "gridsome": "^0.7.0",
+    "materialize-css": "^1.0.0-rc.2",
     "particles.vue": "^1.14.3",
     "typeface-montserrat": "0.0.75"
   },
