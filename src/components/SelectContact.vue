@@ -5,7 +5,7 @@
         <h4>Contact</h4>
 
         <div class="input-field">
-          <form  ref="form" name="contact" method="POST" data-netlify="true">
+          <form  ref="form" name="contact" method="POST" data-netlify="true" enctype="multipart/form-data">
             <label for="contactEmail">Email (required)</label>
             <input id="contactEmail" type="email" name="email" style="margin-bottom: 16px;" v-model="mail" />
 
