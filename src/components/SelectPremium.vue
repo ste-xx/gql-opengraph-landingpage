@@ -44,24 +44,24 @@ export default {
     M.Modal.init(document.querySelectorAll('#modal-premium'));
   },
   methods: {
-      encode(data) {
-          return Object.keys(data)
-              .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-              .join('&');
-      },
-      handleSubmit() {
-          fetch('/', {
-              method: 'post',
-              headers: {
-                  'Content-Type': 'application/x-www-form-urlencoded'
-              },
-              body: this.encode({
-                  'form-name': 'selectPremium',
-                  premiumEmail: this.mail,
-                  premiumConfirm: this.checked
-              })
-          });
-      }
+    encode(data) {
+      return Object.keys(data)
+        .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+        .join('&');
+    },
+    handleSubmit() {
+      fetch('/', {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: this.encode({
+          'form-name': 'selectPremium',
+          email: this.mail,
+          confirm: this.checked
+        })
+      });
+    }
   }
 };
 </script>

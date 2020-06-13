@@ -51,9 +51,9 @@ export default {
         },
         body: this.encode({
           'form-name': 'contact',
-          contactEmail: this.mail,
-          contactName: this.name,
-          contactHelp: this.help
+          email: this.mail,
+          name: this.name,
+          help: this.help
         })
       });
     }
