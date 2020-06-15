@@ -40,13 +40,13 @@
     </div>
 
     <div style="margin-bottom: 15px; margin-top: 15px;">
-      <a style="font-size: var(--font-l);" href="https://opengql.stefanbreitenstein.workers.dev/___graphql" target="_blank">Show in GraphiQL ></a>
+      <a style="font-size: var(--font-l);" href="https://gql.opengql.com/___graphql" target="_blank">Show in GraphiQL ></a>
     </div>
   </div>
 </template>
 
 <script>
-const gqlEndpoint = 'https://opengql.stefanbreitenstein.workers.dev/';
+const gqlEndpoint = 'https://gql.opengql.com/';
 
 export const debounce = ({ fn, timeout }) => {
   let isCalled = false;
