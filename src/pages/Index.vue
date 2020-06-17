@@ -6,15 +6,15 @@
     <h4 id="introduction" class="introduction">Open GQL</h4>
     <p style="margin-top: 0; margin-bottom: min(2.5rem, 16px);" class="font-xl">Open Graph meets GraphQL</p>
     <p id="tagline" class="font-xl" style="line-height: 1.8; margin-bottom: 40px;">
-      All you want to know about a link in a single Request and without a backend.
+      Fetch page infos like description, title, image via GraphQL.
     </p>
     <div class="useCases font-l">
-      <div style="line-height: 1.8;">Create preview links like in whatsapp or facebook from your app.</div>
+      <div style="line-height: 1.8;">Create preview links like in WhatsApp or Facebook Messenger in your app.</div>
       <div style="line-height: 1.8;">Get relevant infos about a link.</div>
     </div>
-    <div id="gettingStarted" class="gettingStarted">
+    <div id="example" class="example">
       <h6 class="font-xxl" style="margin-bottom: 30px;">
-        Getting Started
+        Example
       </h6>
       <preview-card style="width: 100%;">
         <template #description>
@@ -113,7 +113,7 @@ export default {
   margin-bottom: 0;
 }
 
-.gettingStarted {
+.example {
   margin-bottom: 60px;
 }
 

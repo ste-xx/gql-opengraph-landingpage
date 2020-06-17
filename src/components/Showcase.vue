@@ -40,7 +40,7 @@
     </div>
 
     <div style="margin-bottom: 15px; margin-top: 15px;">
-      <a style="font-size: var(--font-l);" href="https://gql.opengql.com/___graphql" target="_blank">Show in GraphiQL ></a>
+      <a style="font-size: var(--font-l);" href="https://gql.opengql.com/___graphql" target="_blank">Show in GraphiQL (the documentation can also be found there)</a>
     </div>
   </div>
 </template>
