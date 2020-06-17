@@ -113,10 +113,10 @@ export default {
         },
         body: JSON.stringify({
           query: `
-          query opengraph($url: String!)
+          query openGraph($url: String!)
           {
-            opengraph(url: $url){
-              opengraph{
+            openGraph(url: $url){
+              openGraph{
                 og_title
                 og_image
                 og_description
@@ -137,7 +137,7 @@ export default {
           return Promise.reject(e);
         })
         .finally(() => (this.loading = false));
-      this.result = result?.data?.opengraph?.opengraph;
+      this.result = result?.data?.openGraph?.openGraph;
       this.pretty = JSON.stringify(result, null, 2);
       console.log(result);
     }
