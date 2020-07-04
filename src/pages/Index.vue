@@ -37,13 +37,13 @@
     <div style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap; margin-bottom: 60px;">
       <pricing-card id="freePricing" class="pricing-card" plan-name="Starter" price="Free">
         <template #description>
-          <free-plan-description style="height: 330px;" />
+          <free-plan-description style="height: 425px;" />
         </template>
       </pricing-card>
 
       <pricing-card id="premiumPlan" class="pricing-card" plan-name="Premium" price="7,99$ per month">
         <template #description>
-          <premium-plan-description style="height: 330px;" />
+          <premium-plan-description style="height: 425px;" />
         </template>
         <template #select>
           <select-premium />

@@ -40,7 +40,7 @@
     </div>
 
     <div style="margin-bottom: 15px; margin-top: 15px;">
-      <a style="font-size: var(--font-l);" href="https://gql.opengql.com/___graphql" target="_blank">Show in GraphiQL (the documentation can also be found there)</a>
+      <a style="font-size: var(--font-l);" href="https://rapidapi.com/ste-xx/api/opengql" target="_blank">Show in RapidApi (the documentation can also be found there)</a>
     </div>
   </div>
 </template>
@@ -104,7 +104,6 @@ export default {
 
       console.log(url);
       const normalizedUrl = url.startsWith('https://') ? url : `https://${url}`;
-      console.log(normalizedUrl);
       this.loading = true;
       const result = await fetch(gqlEndpoint, {
         method: 'post',
